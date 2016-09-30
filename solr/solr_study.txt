@@ -1,0 +1,10 @@
+1、solr segment 索引段
+2、solr facet   //查询 类 分组
+3、
+
+打包 上传deploy 后， 先把 mvn rep 文件夹的 module 干掉，然后 update maven
+
+//ik for solr5
+https://github.com/EugenePig/ik-analyzer-solr5
+
+solr faccet,sugguest,highlight,

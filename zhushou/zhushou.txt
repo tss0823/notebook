@@ -1,0 +1,29 @@
+1、权限控制到按钮 V (待优化)
+
+2、接口文档优化（上下，复制）
+
+3、记录查询cookie,打造个性化搜索 V
+
+4、
+个性化查询  search > cookie > search V
+
+5、迁移注意事项
+config-xx.properties
+DeployServiceImpl.java
+ModuleType.java
+db
+
+6、 枚举约定
+idocUrl 加个type (0:接口；1：枚举 ) 另外系统状态也可以放到枚举中
+
+7、 http tools
+reqContent 所有的 request and response 都放在里面
+
+8、proxy
+
+
+
+
+
+
+

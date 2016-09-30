@@ -1,0 +1,33 @@
+gitlab 搭建
+https://www.gitlab.cc/downloads/#centos7
+最后设置一下自己的域名就可以  打开/etc/gitlab/gitlab.rb，将external_url = 'http://git.example.com'
+
+//重启
+sudo gitlab-ctl reconfigure
+
+//linux
+useradd -p Tqp1928user nixi
+mkdir -p /u01/nixi/apache-tomcat-nixi
+chown -R nixi:nixi /u01
+
+10.51.22.176  120.26.107.78
+
+
+
+//account
+rm-bp1565tae8o488psv.mysql.rds.aliyuncs.com
+数据库 nixidb
+nixiadmin  Tqp1928mysql
+
+
+
+nginx 路径
+/var/opt/gitlab/
+
+user.api.mynixi.com
+
+
+
+
+
+

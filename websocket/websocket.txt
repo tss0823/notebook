@@ -1,0 +1,16 @@
+//read
+1、main thread run method nio read buf to inQueue
+2、inQueue poll data in work thread run method
+3、read buf decode
+3、call out framework getMessage method
+
+//write
+4、out framework send text call send method
+5、encode frame text
+6、add write frame to outQueue
+7、nio write data from outQueue
+
+
+//decode encode
+//protocol
+

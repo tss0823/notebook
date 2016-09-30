@@ -1,0 +1,7 @@
+1、部署机器，端口
+namesrv  1台
+master 2台
+slave 3台
+
+2、taskmq
+3、

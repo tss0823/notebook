@@ -1,0 +1,21 @@
+//权限菜单按钮设计
+
+授权认证，（前端，后台都做，光靠前端不够后台必须做，更严谨）
+
+//authRes 权限资源
+url menu(是否菜单),actionId(menuId),actionIcon(menuIcon),display(1 仅展示,没有操作权限)
+level (1,2),parentId(父级ID)
+
+
+//role  //角色
+
+//roleAuthRes 角色权限资源
+
+//user 表中添加 role 字段（json roleIds）
+
+
+//每次登陆后，根据用户带出权限资源
+菜单动态给出
+设计一个权限类，处理权限map,由url为key,资源为value
+
+

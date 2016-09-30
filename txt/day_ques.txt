@@ -8,5 +8,9 @@
 
 3、markdown 的好处是图片文字化
 
-4、
+4、opentsdb 利用 hbase 集群数据库；influxDb
+
+5、kibana vs grafana
+
+6、
 

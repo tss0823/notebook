@@ -1,0 +1,16 @@
+C:\Users\shan\AppData\Roaming\npm\node_modules\bower
+
+12	天津
+13	河北
+14	山西
+15	内蒙古
+33	浙江
+37	山东
+41	河南
+45	广西
+46	海南
+51	四川
+52	贵州
+62	甘肃
+63	青海
+64	宁夏

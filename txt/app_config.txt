@@ -3,7 +3,6 @@ Java(TM) SE Runtime Environment (build 1.7.0_79-b15)
 Java HotSpot(TM) 64-Bit Server VM (build 24.79-b02, mixed mode)
 
 //deploy
-114.55.40.74 10.45.54.140
 
 QWdqs83629admin
 
@@ -18,20 +17,23 @@ chown -R hongbao:hongbao /u01
 
 //ip
 prod001 10.174.110.159 120.55.74.76
-prod002 10.174.108.45 120.55.74.79 
-prod003 10.24.27.47 14.55.29.68
+prod002 10.174.108.45 120.55.74.79
+prod003 10.24.27.47 114.55.29.68
 prod004 10.24.26.251 114.55.29.133
 prod005 10.24.36.133 114.55.57.142
 
 bos/web 10.24.33.195 114.55.54.131
 task    10.47.96.84 120.27.139.208
 
-test 10.51.16.14 120.26.119.192
+#test 10.51.16.14 120.26.119.192
 
 test_new 10.174.107.140 120.55.75.53
 
+
+deploy 10.45.54.140 114.55.40.74
 RDS  10.146.66.132
 
+SLB 120.55.104.129
 
 
 
@@ -76,7 +78,6 @@ show variables like '%max_connections%';
 
 //
 mvn clean package -Dmaven.test.skip=true
-
 
 
 //logstash   elk

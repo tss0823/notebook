@@ -1,0 +1,22 @@
+news
+
+1、爬虫 > 数据 > 内存表
+
+2、task > 数据 > 模板 > h5 file
+
+3、jetty > url route > cache > h5 file
+
+
+
+
+//database design
+content
+
+//数据库连接
+http://114.215.206.151:8082/
+jdbc:h2:tcp://localhost/~/wz
+wz
+wz19870823
+
+
+

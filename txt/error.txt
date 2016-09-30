@@ -1,0 +1,15 @@
+2016-05-18 00:01:23.140 [http-bio-28083-exec-3] ERROR com.hongbao.utils.JsonUtil [JsonUtil.java:28]-Unrecognized token 'method': was expecting ('true', 'fals
+e' or 'null')
+ at [Source: java.io.StringReader@1f423a59; line: 1, column: 7]
+com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'method': was expecting ('true', 'false' or 'null')
+
+//已解决，是不合法字符， 比如这个 ==>
+
+
+//日志经常找不到， 比如 solr 查询日志 redis 问题(估计 redis 丢数据了)
+
+//redis 问题
+
+
+
+

@@ -1,0 +1,10 @@
+//资料
+https://www.elastic.co/guide/en/logstash/current/working-with-plugins.html
+
+bin/logstash-plugin list
+bin/logstash-plugin list --verbose
+bin/logstash-plugin list *namefragment*
+bin/logstash-plugin list --group output
+
+http://www.jianshu.com/p/4fe495639a9a
+

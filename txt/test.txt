@@ -1,2 +1,30 @@
 # aa
+13664
+13667
+13668
+13669
+sh /u01/synFile/synFile.sh /u01/project/hongbao_deploy/conf/logging.properties /u01/hongbao/apache-tomcat-hongbao/hongbao_rest_biz/conf/logging.properties 10.174.110.159,10.174.108.45,10.24.27.47,10.24.26.251,10.24.36.133
+
+sh /u01/synFile/synFile.sh /u01/project/hongbao_deploy/conf/logging.properties /u01/hongbao/apache-tomcat-hongbao/hongbao_rest_user/conf/logging.properties 10.174.110.159,10.174.108.45,10.24.27.47,10.24.26.251,10.24.36.133
+
+sh /u01/synFile/synFile.sh /u01/project/hongbao_deploy/conf/logging.properties /u01/hongbao/apache-tomcat-hongbao/hongbao_rest_biz/conf/logging.properties
+
+//
+sh /u01/editFile/editFile.sh /u01/hongbao/apache-tomcat-hongbao/hongbao_rest_biz/logs 10.174.110.159,10.174.108.45,10.24.27.47,10.24.26.251,10.24.36.133
+
+//
+sh /u01/editFile/editFile.sh /u01/hongbao/apache-tomcat-hongbao/hongbao_rest_user/ 10.174.110.159,10.174.108.45,10.24.27.47,10.24.26.251,10.24.36.133
+
+
+#del tomcat logs
+find /u01/hongbao/apache-tomcat-hongbao/*/logs -ctime +6 |xargs rm -fr
+echo > /u01/hongbao/apache-tomcat-hongbao/*/logs/catalina.out
+echo > /u01/hongbao/apache-tomcat-hongbao/*/logs/gc.out
+
+#del tomcat bak
+find /u01/hongbao/apache-tomcat-hongbao/*/bak -maxdepth 1 -ctime +6 |xargs rm -fr
+
+#del hongbao_log
+find /u01/hongbao/hongbao_log/ -type f -ctime +6 | xargs rm -fr
+
 

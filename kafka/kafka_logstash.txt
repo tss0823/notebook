@@ -1,0 +1,148 @@
+
+首页
+关于我们
+新闻资讯
+数据中心
+服务器托管
+服务器租用
+解决方案
+支持中心
+联系我们
+
+Logstash与Kafka集成
+
+
+
+在ELKK的架构中，各个框架的角色分工如下：
+
+ElasticSearch1.7.2：数据存储+全文检索+聚合计算+服务端
+
+Logstasch2.2.2：日志收集与分发推送
+
+Kafka0.9.0.0：分布式高可靠消息队列+数据中转存储（失效期默认7天，可配置时间或大小来控制删除策略）
+
+Kibana4.1.2：全文检索+查询+图形化页面展示+客户端
+拓扑架构如下：
+
+Logstash与Kafka集成
+本篇主要讲logstash与kafka的集成：
+
+（1）logstash作为kafka的生产者，就是logstash收集的日志发送到kafka中
+
+（2）logstash作为kafka的消费者，消费kafka里面的数据打印到终端
+（一）安装kafka集群，请参考散仙上篇文章：
+
+http://qindongliang.iteye.com/blog/2278194
+
+（二）安装logstash
+
+这个非常简单，直接下载最新版的logstash，经测试logstash1.5.4有问题，不能正常安装插件
+
+wget https://download.elastic.co/logstash/logstash/logstash-2.2.2.tar.gz
+为了能够快速下载logstash的相关插件，然后修改logstash的代理
+
+（方案一）
+
+安装ruby的gem
+
+yum -y install ruby rubygems
+安装国内淘宝的代理源：
+
+gem sources –remove http://rubygems.org/
+
+gem sources -a https://ruby.taobao.org/
+
+gem sources -l
+
+
+ *** CURRENT SOURCES *** https://ruby.taobao.org/
+
+
+（方案二）
+
+修改logstash目录下的Gemfile里面的source的url为
+
+https://ruby.taobao.org/
+
+然后就不用用方案一的方法了
+
+最新版的logstash2.2支持修改Gemfile里面的地址为淘宝的镜像地址
+
+使用的是最新版本2.2.2的logstash
+
+
+ //安装logstash输出到kafka的插件： bin/plugin install logstash-output-kafka
+  //安装logstash从kafka读取的插件： bin/plugin install logstash-input-kafka
+
+
+logstash-consume-kafka.conf消费者配置
+
+
+
+ input{
+     kafka{
+     //zk的链接地址      zk_connect=>"h1:2181,h2:2181,h3:2181/kafka"
+ //topic_id，必须提前在kafka中建好      topic_id=>'logstash'
+  //解码方式json，
+  codec => json
+    //消费者id，多个消费者消费同一个topic时，做身份标识
+    consumer_id => "187"   //消费者组
+       group_id=> "logstash" //重新负载时间
+         rebalance_backoff_ms=>5000 //最大重试次数
+          rebalance_max_retries=>10     }  }  output{    stdout{      codec=>line          }  }
+
+
+
+procuder_kafka_es.conf生产者配置：
+
+
+ input{  //监听log文件   file{     path=> ["/ROOT/server/logstash-2.2.2/t.log"]       } }
+
+  output{  //输出端1=>Kafka
+    kafka{     bootstrap_servers=> 'h1:9092,h2:9092,h3:9092'
+     topic_id=> 'logstash'
+         }
+
+      //输出端2=>ElasticSearch
+        elasticsearch{   hosts=> ["192.168.1.187:9200","192.168.1.184:9200","192.168.1.186:9200"]    }  }
+
+
+如果想用Logstash读取kafka某个topic的所有数据，需要加上下面2个配置：
+
+
+      auto_offset_reset => 'smallest'      reset_beginning => true
+
+
+但需要注意的是，如果是读取所有的数据，那么此时，对于kafka的消费者同时只能有一个，如果有多个
+
+那么会报错，因为读取所有的数据，保证顺序还不能重复读取消息，只能使用一个消费者，如果不是
+
+读取所有，仅仅读取最新传过来的消息，那么可以启动多个消费者，但建议消费者的数目，与该topic的
+
+partition的个数一致，这样效果最佳且能保证partition内的数据顺序一致，如果不需要保证partition分区内数据
+
+有序，可以接受乱序，那就无所谓了
+
+
+
+参考资料
+http://bigbo.github.io/pages/2015/08/07/logstash_kafka_new/
+http://soft.dog/2016/01/08/logstash-plugins/
+http://www.rittmanmead.com/2015/10/forays-into-kafka-01-logstash-transport-centralisation/
+
+
+
+
+
+有什么问题 可以扫码关注微信公众号：我是攻城师(woshigcs)，在后台留言咨询。
+
+本公众号的内容是有关搜索和大数据技术和互联网等方面内容的分享，也是一个温馨的技术互动交流的小家园
+
+
+
+Logstash与Kafka集成
+« 教您使用java爬虫gecco抓取JD全部商品信息（一）
+总结一下app提交审核不通过的经历 »
+所有文章	所有文章
+Copyright © 北京中联互动科技发展有限公司
+地址: 鲁谷重聚园三期甲18号楼 联系电话:13051898268 北京兆维机房 北京服务器托管

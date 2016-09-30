@@ -1,0 +1,24 @@
+//资料
+http://www.bogotobogo.com/Hadoop/BigData_hadoop_Zookeeper_Kafka_single_node_Multiple_broker_cluster.php
+
+//相关命令
+//start
+bin/kafka-server-start.sh config/server.properties > /dev/null &
+
+//create topic
+bin/kafka-topics.sh --create --zookeeper 10.174.108.45:2181,10.24.27.47:2181,10.24.26.251:2181/yuntao_log --replication-factor 3 --partition 1 --topic kafka-yuntao
+
+/list topic
+bin/kafka-topics.sh --list --zookeeper 10.174.108.45:2181,10.24.27.47:2181,10.24.26.251:2181/yuntao_log
+
+//end message
+bin/kafka-console-producer.sh --broker-list 10.47.96.84:9092 10.24.33.195:9092 10.24.36.133:9092 --topic kafka-yuntao
+
+//receive message
+bin/kafka-console-consumer.sh --zookeeper 10.174.108.45:2181,10.24.27.47:2181,10.24.26.251:2181/yuntao_log --from-beginning --topic kafka-yuntao
+
+
+//error
+遇到 java.net.UnknownHostException: kafka: Name or service not known  //直接把 127.0.0.1 kafka  放到 /etc/hosts 中
+http://stackoverflow.com/questions/25497279/unknownhostexception-kafka
+

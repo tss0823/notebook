@@ -1,0 +1,15 @@
+//删除不是今天（24小时）的日志
+find . -type f -not -atime -1 | xargs rm -fr
+
+//删除大于100M的日志
+find ~ -size +100M  |  grep "hongbao_log" | xargs rm -fr
+
+//删除文件名不包含 “2016-05-24”
+find . -type f -not -name  "*2016-05-24*" | xargs rm -fr
+find /u01/hongbao/hongbao_log/ -type f -not -name  "*2016-05-24*" | xargs rm -fr
+
+sh /u01/synFile/synFile.sh /u01/clearLog.sh /u01/hongbao/clearLog.sh 10.174.110.159,10.174.108.45,10.24.27.47,10.24.26.251,10.24.36.133,10.24.33.195,10.47.96.84,10.174.107.140
+
+
+
+

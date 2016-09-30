@@ -1,0 +1,127 @@
+//基础接口
+注册
+登录
+忘记密码
+修改密码
+个人信息
+
+//首页接口
+
+//食物打卡 （早，中，晚）
+我的食物建议接口 (早，中，晚)
+食物选项 （公用）
+提交食物打卡 （早，中，晚）
+我的历史食物打卡（早，中，晚）
+
+//运动打卡
+我的运动建议
+运动选项 （公用）
+提交运动打卡
+我的历史运动打卡
+
+//其他
+今日减脂收益
+
+//日历
+每日运动建议
+食物建议（早，中，晚）
+
+//视频下载，上传（bos）
+
+
+//数据库设计
+
+//运动单位
+次/组*组
+分钟/组*组
+分钟
+天
+
+//食物单位
+kcal/100g
+
+自定义食物
+名称
+单位（碟，杯）
+热量
+
+包名 com.mynixi.health
+
+
+//数据库设计
+
+//用户表
+nickName
+sex
+birthday
+message  宣言
+mobile
+avatar  头像
+
+//食物类目 food
+name
+unit  单位 (100g,杯，碟)
+kcal  热量
+category 分类 （蛋白质，碳化合物）
+
+
+//运动类目 sport
+name
+unit (次/组*组 ..)
+kcal 热量
+category 分类
+
+//食物打卡记录
+userId
+type (早，中，晚)
+foodId  食物类目id
+quantity 数量 // （200g,一杯）
+照片 //todo
+
+
+
+//运动打卡记录
+userId
+type (正常，追加的)
+sportId
+quantity 数量 // （一分钟,2组）
+照片 //todo
+
+//食物每天推荐 （区分会员和非会员）
+userId
+type
+foodId
+quantity
+
+
+//运动每天推荐 （区分会员和非会员）
+userId
+type
+sportId
+quantity 数量 // （一分钟,2组）
+
+//每日减脂 （计算个人打卡数据获取,后台task）
+userId
+base 基础代谢
+in
+out
+result
+description
+
+
+
+华中的   huazhong.liu@mynixi.com    Huazhong123
+你的       jing.li@mynixi.com   Lijing123账号 密码，密码注意大小写
+
+
+//新增接口
+1、首页打卡类目
+2、身体数据
+3、今日减脂
+
+
+4、类目搜素 ，只给一级类目
+5、task任务，类目给出
+6、我的打卡记录
+
+

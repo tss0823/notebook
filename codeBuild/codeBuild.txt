@@ -1,0 +1,23 @@
+//待完成的工作
+selectCount return Long
+delStatusu
+
+模板 delStatus 改成 delState
+
+根据条件 getOne
+
+添加 deleteDirectById  //物理删除
+
+update where sql long integer 咩有 != ''
+
+//怎么提取css
+
+拿到html ,html引用的css 文件
+
+拿到控件 div
+
+div 获取所有 class 样式，在 css 文件中找到
+
+
+
+

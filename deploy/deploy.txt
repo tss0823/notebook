@@ -1,0 +1,71 @@
+//package
+./deploy.sh package,yuntao-search,master,prod
+
+//install
+./deploy.sh install,yuntao-search search 10.174.107.140
+
+//restart
+./deploy.sh restart search 10.174.107.140
+
+
+//run
+./deploy.sh run,yuntao-search search 10.174.107.140
+
+//rollback
+./deploy.sh rollback,ROOT_20160620_1350_34.BAK search 10.174.107.140
+
+//规范
+1、项目对于非集群，前期，为了满足快速迭代开发
+格式：[projectName-moduleName]
+hongbao-model
+hongbao-common
+hongbao-dal
+hongbao-service
+hongbao-web >  [user,biz,bos,h5]
+
+包名规范：com.company.projectName
+com.yuntao.hongbao
+
+服务器部署项目规范
+格式：[tomcat_project_moduleName]
+/u01/deploy/tomcat_user
+/u01/deploy/tomcat_biz
+/u01/deploy/tomcat_bos
+/u01/deploy/tomcat_h5
+
+数据库规范
+库名：project_name(hongbao)  xxxadmin xxxxx
+表名：对应实体名称
+字段名：对应属性名称
+
+2、集群规范,对于第一种规范所改进的地方有
+项目结构：
+user-common
+user-model
+user-dal
+user-api
+user-serice
+user-web
+其实是把抽象的项目名称（hongbao）改成更具体化(user,biz,h5,bos,search)
+
+当不断的有新的项目产生时，hongbao-common 可以抽象出来，给各自项目引用。独立出一个新的工程
+并导出 hongbao-common.jar
+
+对于外围引用，maven deploy user-model user-api
+
+
+--服务器部署项目规范
+--格式：[tomcat_project_moduleName]
+
+
+数据库规范
+库名：project_name（user,biz）此时，分库开始，所以库名更具体化
+表名: 分表，通过哈希散列表 user_xx,或者按时间产生 log_20160805
+
+
+
+
+
+
+
+

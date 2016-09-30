@@ -1,0 +1,26 @@
+Client port #
+Quorum port #
+Leader election port #
+
+
+//操作步骤
+http://www.cnblogs.com/wxisme/p/5178211.html
+
+http://www.cnblogs.com/wxisme/p/5180120.html
+http://www.cnblogs.com/freeweb/p/5258323.html
+
+./server/scripts/cloud-scripts/zkcli.sh -zkhost zk1:2181,zk2:2181,zk3:2181 -cmd upconfig -confname students -confdir server/solr/configsets/sample_techproducts_configs/conf
+
+//java
+http://www.cnblogs.com/mouseIT/p/5301966.html
+
+//客户端管理
+bin/zkCli.sh -server localhost:2181
+
+//查看根目录所有的节点
+ls /
+
+//创建空的节点
+create /solr null
+
+

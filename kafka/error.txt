@@ -1,0 +1,7 @@
+kafka.common.KafkaException: Should not set log end offset on partition
+配置下 conf/server.properties listener.host 为实际ip ,不能为0.0.0.0
+参照：
+http://www.bubuko.com/infodetail-1456519.html
+
+
+

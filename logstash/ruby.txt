@@ -1,0 +1,6 @@
+//安装：
+http://www.runoob.com/ruby/ruby-installation-unix.html
+
+./configure --with-openssl-dir=/usr/include  //这个必须的，不然不会关联 openssl
+
+

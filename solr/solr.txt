@@ -1,0 +1,43 @@
+1、zookeeper 机器 prod002 prod003 prod004
+2、solr 机器 prod001 prod002 prod005
+
+
+//solrCloud
+http://my.oschina.net/zengjie/blog/197960
+
+//操作步骤
+配置 bin/solr.in.sh
+启动 sh solr-2/bin/solr start
+
+//目录结果
+solr_home[.server/solr]
+
+索引目录
+solr.xml
+zoo.cfg
+core[shard_name]/
+  data/   //索引
+
+.configsets/sample_techproducts_configs/conf/
+   solrconfig.xml
+   schema.xml
+.conf/  //简化
+
+
+
+//配置
+//create index
+./bin/solr create_collection -c index_yuntao -d server/solr/conf -shards 3 -replicationFactor 2
+
+//update index
+./server/scripts/cloud-scripts/zkcli.sh -zkhost 10.174.107.140:30001,10.174.107.140:30002,10.174.107.140:30003/yuntao_search -cmd upconfig -confname index_tree -confdir server/solr/conf_tree
+
+//collections api
+https://cwiki.apache.org/confluence/display/solr/Getting+Started+with+SolrCloud
+
+//add node
+http://114.55.57.142:8983/solr/admin/collections?action=ADDREPLICA&collection=yuntao8&shard=shard1&node=10.174.110.159:8983_solr
+
+//delete collection
+curl -XGET "http://localhost:8983/solr/admin/collections?action=DELETE&name=index_shop"
+

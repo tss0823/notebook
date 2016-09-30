@@ -1,0 +1,45 @@
+producer  add msg
+
+consumer  take msg execute msg
+
+//演化步骤
+1、简单的单机一个生产，一个消费,效率低下
+
+2、多个点生产，多个点消费，消息放在单机队列中,此时单机队列是瓶颈
+
+3、单机队列扩展成多点，负载，分布，由谁来做（producer or namesrv ?）
+
+4、专门弄个点（namesrv）来协调broker,producer,consumer,每个点都跟namesrv 保持长连接，这样监控也解决了。
+
+5、queue io 瓶颈，master slave 分离
+
+//设计
+producer build msg > namesrv 同步的本地 broker topic  > broker master > copy broker slave >
+
+consumer listener namesrv > pull broker > take msg
+
+网络IO netty write read
+
+//容错
+try 3次 timeout
+
+//监控
+心跳
+
+//负载 ,分布
+master-slave
+hash
+
+//模式
+广播
+cluster
+
+//
+HA 同步复制
+HA 异步复制
+http://blog.csdn.net/quhongwei_zhanqiu/article/details/39144469
+
+//broker file
+http://blog.csdn.net/quhongwei_zhanqiu/article/details/39144223
+
+

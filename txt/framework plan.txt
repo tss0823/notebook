@@ -1,0 +1,4 @@
+1、文件同步工具，目前通过脚本同步费时，每次在一个点实验好文件,或文件夹（比如：logging.properties,logstash）,
+需要同步到其他的点,通过ip 多选框，src file,target file
+
+

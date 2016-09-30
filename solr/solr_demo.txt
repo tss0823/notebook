@@ -1,0 +1,23 @@
+//创建索引
+[hongbao@iZ23kwia6yeZ solr-1]$ ./bin/solr create_collection -c index_yuntao -d server/solr/conf -shards 3 -replicationFactor 2
+
+Connecting to ZooKeeper at 10.174.107.140:30001,10.174.107.140:30002,10.174.107.140:30003/yuntao_search ...
+Uploading /home/hongbao/solr-1/server/solr/conf for config index_yuntao to ZooKeeper at 10.174.107.140:30001,10.174.107.140:30002,10.174.107.140:30003/yuntao_search
+
+Creating new collection 'index_yuntao' using command:
+http://localhost:29003/solr/admin/collections?action=CREATE&name=index_yuntao&numShards=3&replicationFactor=2&maxShardsPerNode=2&collection.configName=index_yuntao
+
+{
+  "responseHeader":{
+    "status":0,
+    "QTime":18651},
+  "success":{"":{
+      "responseHeader":{
+        "status":0,
+        "QTime":17600},
+      "core":"index_yuntao_shard1_replica2"}}}
+[hongbao@iZ23kwia6yeZ solr-1]$
+
+
+
+

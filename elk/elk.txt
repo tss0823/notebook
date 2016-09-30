@@ -1,0 +1,27 @@
+安装机器：
+deploy task
+cluster 集群
+shared replicas
+index
+type
+id
+document
+
+//集群机制
+http://www.shaheng.me/blog/2015/06/elasticsearch--.html
+
+builder index,update,del > shared master
+
+routing ,node ，copy all replicas
+
+read  > replicas 副本
+
+
+//solr 集群 原理
+http://eksliang.iteye.com/blog/2110676
+
+builder index > shared leader ,then copy to this shared replicas
+
+search , to shared , then dispather multi children query other replicas,last merge all children search result.
+
+

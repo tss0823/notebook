@@ -1,0 +1,59 @@
+//架构
+app > java server > mysql (RDS) | redis | solr
+
+//java
+mybatis + spring + springMvc (springBoot)
+
+//rpc
+dubbo + zookeeper
+
+//search
+solr 集群 + zookeeper
+
+//im
+redis 队列 + websocket
+
+//log
+logstash + es集群 + redis/kafka + zookeeper
+
+
+
+-----------------------------logstash--------------------------------------
+1、下载 es 官网  (ruby语言编写，有丰富的input,outer 插件)
+2、日志采集器，可对接 file,redis,es,kafka,定义插件
+3、采集位置 begin,tail,并发线程 thread，数据格式转换
+
+
+-----------------------------elasticsearch------------------------------------
+1、下载es 官网 （基于json格式，天生自带集群比solr更有优势，维基百科，微软都在用）
+2、索引基于lucene
+3、丰富的插件（head,kopf） 用于监控和管理
+4、完善的restful api 应用和管理
+5、提供（java） client sdk
+
+
+-----------------------------kafka--------------------------------------------
+1、java scala 写的，linkedIn 开源的消息队列，国内有ali的metaMQ,rocketMQ
+2、吞吐量高，并发小，容错性稍微，rocketMQ 并发高，容错性好
+3、
+
+--------------------------------redis------------------------------------------
+1、api
+2、redis.conf
+3、set,get,hash,list,（订阅，发布）
+4、redis数据结构
+5、
+
+--------------------------------dubbo------------------------------------------
+1、rpc
+
+
+
+--------------------------------zookeeper--------------------------------------
+
+
+
+--------------------------------solr-------------------------------------------
+
+
+

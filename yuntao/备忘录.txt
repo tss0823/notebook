@@ -1,0 +1,21 @@
+//android 上传路径
+String url = new ResourceFacadeImpl().uploadFileAndDefName(data,"resource/android/user.apk");
+
+//红包商城
+所有的 实物，代金券
+//
+最新整理 过滤掉云币商城的红包
+
+//快赚商城
+实物，代金券，佣金红包
+
+//云币商城
+1、实物
+2、非佣金红包
+3、只有一块钱
+OR 加价红包成本价1分钱，并且售价<=1毛钱 (modify at 7.28)
+OR 加价红包成本0-1分钱，并且售价为0 (modify at 7.29)
+
+
+
+

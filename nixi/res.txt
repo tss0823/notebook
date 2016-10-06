@@ -1,9 +1,43 @@
 gitlab 搭建
+https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/README.md#reconfigure-freezes-at-ruby_block-supervise_redis_sleep-action-run
+https://about.gitlab.com/downloads/
 https://www.gitlab.cc/downloads/#centos7
 最后设置一下自己的域名就可以  打开/etc/gitlab/gitlab.rb，将external_url = 'http://git.example.com'
 
-//重启
+http://www.tuicool.com/articles/RVbu6bE
+
+[root@iZ231prug7qZ ~]# rpm -i gitlab-ce-8.9.5-ce.0.el7.x86_64.rpm
+gitlab: Thank you for installing GitLab!
+gitlab: To configure and start GitLab, RUN THE FOLLOWING COMMAND:
+
 sudo gitlab-ctl reconfigure
+
+gitlab: GitLab should be reachable at http://git.mynixi.com
+gitlab: Otherwise configure GitLab for your system by editing /etc/gitlab/gitlab.rb file
+gitlab: And running reconfigure again.
+gitlab:
+gitlab: For a comprehensive list of configuration options please see the Omnibus GitLab readme
+gitlab: https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/README.md
+gitlab:
+It looks like GitLab has not been configured yet; skipping the upgrade script.
+
+
+//配置
+sudo gitlab-ctl reconfigure
+/opt/gitlab/bin/gitlab-ctl reconfigure
+
+//重启
+sudo gitlab-ctl restart
+
+nginx 路径
+/var/opt/gitlab/
+
+//应用nginx路径
+/usr/local/nginx
+
+
+//修改gitlab 账户密码(ps 密码至少8位)
+https://forum.gitlab.com/t/how-to-reset-the-admin-password-via-the-rails-console/223
 
 //linux
 useradd -p Tqp1928user nixi
@@ -21,10 +55,9 @@ nixiadmin  Tqp1928mysql
 
 
 
-nginx 路径
-/var/opt/gitlab/
 
 user.api.mynixi.com
+
 
 
 

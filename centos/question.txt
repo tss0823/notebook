@@ -6,4 +6,6 @@
 
 //google-chrome-stable 版本不能安装，目前只安装了一个chrominu
 
+//tar unzip jar 7za 解压文件出现io 错误，好难解决
+
 //

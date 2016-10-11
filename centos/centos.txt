@@ -1,5 +1,6 @@
 //linux 使用 rinetd 实现端口转发
 http://blog.sina.com.cn/s/blog_695d0b300101bdan.html
+rinetd -c /etc/rinetd.conf  //启动
 
 //给普通用户添加管理员权限
 vim /etc/sudoers

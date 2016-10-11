@@ -1,0 +1,9 @@
+//不能截图，chrome 装了插件也不行
+
+//视频不能播放
+
+//idea 用shan用户启动，出现socket permission 错误
+
+//google-chrome-stable 版本不能安装，目前只安装了一个chrominu
+
+//

@@ -8,4 +8,6 @@
 
 //tar unzip jar 7za 解压文件出现io 错误，好难解决
 
-//
+//deb 转rmp 错错
+
+//dhc client 插件 版本不支持

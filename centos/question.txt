@@ -1,6 +1,8 @@
 //不能截图，chrome 装了插件也不行
+\\解决方案,可以自定义大小截屏 gnmoe-screenshot http://www.cnblogs.com/Lynn-Zhang/p/5524754.html
 
-//视频不能播放
+
+//视频不能播放,音乐也不能播放
 
 //idea 用shan用户启动，出现socket permission 错误
 
@@ -10,4 +12,6 @@
 
 //deb 转rmp 错错
 
-//dhc client 插件 版本不支持
+//dhc client 插件chrominu 版本太低不支持
+
+//

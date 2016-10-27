@@ -46,7 +46,8 @@ chown -R nixi:nixi /u01
 
 10.51.22.176  120.26.107.78
 
-
+##线上pwd
+DC78d74819927db0
 
 //account
 rm-bp1565tae8o488psv.mysql.rds.aliyuncs.com

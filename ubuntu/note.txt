@@ -1,0 +1,2 @@
+## 重启网络
+service network-manager restart

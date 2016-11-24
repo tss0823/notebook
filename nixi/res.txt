@@ -38,6 +38,73 @@ nginx 路径
 
 //修改gitlab 账户密码(ps 密码至少8位)
 https://forum.gitlab.com/t/how-to-reset-the-admin-password-via-the-rails-console/223
+user = User.find_by(email: 'admin@local.host')
+user.password = 'secret_pass'
+user.password_confirmation = 'secret_pass'
+user.save
+
+//添加新的分区 /u01
+//相关链接地址
+http://www.cnblogs.com/kerrycode/p/3913606.html
+//step1
+vim /etc/fstab
+//step2 add
+/dev/vdb1               /u01                    ext4    defaults        1 2
+
+//step3
+[root@iZ23trimavvZ ~]# fdisk /dev/vdb
+Welcome to fdisk (util-linux 2.23.2).
+
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table
+Building a new DOS disklabel with disk identifier 0xa45f26d1.
+
+Command (m for help): m
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition
+   g   create a new empty GPT partition table
+   G   create an IRIX (SGI) partition table
+   l   list known partition types
+   m   print this menu
+   n   add a new partition
+   o   create a new empty DOS partition table
+   p   print the partition table
+   q   quit without saving changes
+   s   create a new empty Sun disklabel
+   t   change a partition's system id
+   u   change display/entry units
+   v   verify the partition table
+   w   write table to disk and exit
+   x   extra functionality (experts only)
+
+Command (m for help): n
+Partition type:
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended
+Select (default p): p
+Partition number (1-4, default 1):
+First sector (2048-419430399, default 2048):
+Using default value 2048
+Last sector, +sectors or +size{K,M,G} (2048-419430399, default 419430399):
+Using default value 419430399
+Partition 1 of type Linux and of size 200 GiB is set
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+Syncing disks.
+
+//setp 4
+mkfs.ext4 /dev/vdb1
+
+//step5
+amount -a
 
 //linux
 useradd -p Tqp1928user nixi

@@ -40,6 +40,19 @@ SLB 120.55.104.129
 ./deploy.sh package,prod,prod
 ./deploy.sh run biz 10.24.26.251
 
+//hongbao
+sh /u01/deploy/script/deploy.sh package,prod,prod
+sh /u01/deploy/script/deploy.sh run biz 10.174.110.159,10.174.108.45
+sh /u01/deploy/script/deploy.sh run task 10.24.33.195
+
+//im
+sh /u01/deploy/script_v2/deploy.sh package,yuntao-im,prod,prod
+sh /u01/deploy/script_v2/deploy.sh run,yuntao-im im 10.174.110.159,10.174.108.45
+
+
+
+
+sh /u01/deploy/script/deploy.sh run biz 10.174.110.159,10.174.108.45
 
 http://prod002.yuntaohongbao.com:28083/	checkServerStatus
 

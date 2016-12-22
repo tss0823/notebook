@@ -30,7 +30,7 @@ sudo gitlab-ctl reconfigure
 sudo gitlab-ctl restart
 
 nginx 路径
-/var/opt/gitlab/
+/var/opt/gitlab/nginx/conf/nginx.conf
 
 //应用nginx路径
 /usr/local/nginx
@@ -104,7 +104,7 @@ Syncing disks.
 mkfs.ext4 /dev/vdb1
 
 //step5
-amount -a
+mount -a
 
 //linux
 useradd -p Tqp1928user nixi

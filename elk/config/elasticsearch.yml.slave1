@@ -20,17 +20,16 @@ cluster.name: ec_cluster
 #
 # Use a descriptive name for the node:
 #
-#node.name: node-slave1
-node.name: "node-slave1"
+node.name: "node-2"
 
 #add for shard
-node.master: true
+node.master: false
 node.data: true
 
 #
 # Add custom attributes to the node:
 #
-node.rack: r2
+node.rack: r1
 index.number_of_shards: 5 
 index.number_of_replicas: 3
 #
@@ -83,14 +82,14 @@ http.max_content_length: 100mb
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
 discovery.zen.ping.timeout: 120s 
-discovery.zen.ping.multicast.enabled: true
+discovery.zen.ping.multicast.enabled: false
 #discovery.zen.ping.unicast.hosts: ["node-master","node-slave1", "node-slave2"]
-discovery.zen.ping.unicast.hosts: ["node-master"]
+discovery.zen.ping.unicast.hosts: ["node-1:9300"]
 #discovery.zen.ping.unicast.hosts: ["10.45.54.140:9300","10.24.33.195:9300", "10.47.96.84:9300"]
 #
 # Prevent the "split brain" by configuring the majority of nodes (total number of nodes / 2 + 1):
 #
-discovery.zen.minimum_master_nodes: 2
+#discovery.zen.minimum_master_nodes: 2
 #
 # For more information, see the documentation at:
 # <http://www.elastic.co/guide/en/elasticsearch/reference/current/modules-discovery.html>

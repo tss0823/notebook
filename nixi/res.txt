@@ -38,6 +38,7 @@ nginx 路径
 
 //修改gitlab 账户密码(ps 密码至少8位)
 https://forum.gitlab.com/t/how-to-reset-the-admin-password-via-the-rails-console/223
+sudo gitlab-rake rails console
 user = User.find_by(email: 'admin@local.host')
 user.password = 'secret_pass'
 user.password_confirmation = 'secret_pass'

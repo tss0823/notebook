@@ -161,6 +161,11 @@ scp /u01/logstash-2.3.1/prod/inner.conf /u01/redis-3.2.0/redis.conf 192.168.1.4:
 //复制profile
 scp /etc/profile 192.168.1.4:/etc/profile
 
+//复制tomcat
+cp -r tomcat_cp/ tomcat_member
+cp -r tomcat_cp/ tomcat_trainer
+cp -r tomcat_cp/ tomcat_bos
+cp -r tomcat_cp/ tomcat_h5
+cp -r tomcat_cp/ tomcat_task
 
-scp /u01/logstash-2.3.1/prod/inner.conf /u01/redis-3.2.0/redis.conf 192.168.1.4:/u01/logstash-2.3.1/prod/jpro
-scp /u01/logstash-2.3.1/prod/inner.conf /u01/redis-3.2.0/redis.conf 192.168.1.4:/u01/logstash-2.3.1/prod/
+//复制tomcat server.conf

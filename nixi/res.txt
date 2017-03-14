@@ -129,15 +129,14 @@ user.api.mynixi.com
 
 
 mkdir /u01
-mkdir -p deploy/projet
-
+mkdir -p deploy/project
 
 //复制文件
 scp ext.zip tomcat_cp.zip ssh.zip shell.zip redis-3.2.0.tar.gz path.zip nginx-1.9.15.tar.gz logstash-2.3.1_cp.zip 192.168.1.4:/u01/
 
 //跳到目标机器解压
-unzip ext.zip -d deploy/projet/
-unzip tomcat_cp.zip -d deploy/projet/
+unzip ext.zip -d deploy/project/
+unzip tomcat_cp.zip -d deploy/project/
 unzip logstash-2.3.1_cp.zip
 unzip path.zip
 unzip shell.zip
@@ -169,3 +168,9 @@ cp -r tomcat_cp/ tomcat_h5
 cp -r tomcat_cp/ tomcat_task
 
 //复制tomcat server.conf
+scp /u01/deploy/project/tomcat_member/conf/server.xml root@192.168.1.4:/u01/deploy/project/tomcat_member/conf/
+scp /u01/deploy/project/tomcat_trainer/conf/server.xml root@192.168.1.4:/u01/deploy/project/tomcat_trainer/conf/
+scp /u01/deploy/project/tomcat_bos/conf/server.xml root@192.168.1.4:/u01/deploy/project/tomcat_bos/conf/
+scp /u01/deploy/project/tomcat_h5/conf/server.xml root@192.168.1.4:/u01/deploy/project/tomcat_h5/conf/
+scp /u01/deploy/project/tomcat_task/conf/server.xml root@192.168.1.4:/u01/deploy/project/tomcat_task/conf/
+

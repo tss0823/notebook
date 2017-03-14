@@ -128,8 +128,39 @@ nixiadmin  Tqp1928mysql
 user.api.mynixi.com
 
 
+mkdir /u01
+mkdir -p deploy/projet
 
 
+//复制文件
+scp ext.zip tomcat_cp.zip ssh.zip shell.zip redis-3.2.0.tar.gz path.zip nginx-1.9.15.tar.gz logstash-2.3.1_cp.zip 192.168.1.4:/u01/
+
+//跳到目标机器解压
+unzip ext.zip -d deploy/projet/
+unzip tomcat_cp.zip -d deploy/projet/
+unzip logstash-2.3.1_cp.zip
+unzip path.zip
+unzip shell.zip
+unzip ssh.zip -d /home/dfit/
+tar -xf nginx-1.9.15.tar.gz
+tar -xf redis-3.2.0.tar.gz
+
+//安装nginx
+//安装 redis
 
 
+//复制nginx 配置文件
+scp /usr/local/nginx/conf/nginx.conf 192.168.1.4:/usr/local/nginx/conf/
 
+//复制redis
+scp /u01/redis-3.2.0/redis.sh /u01/redis-3.2.0/redis.conf 192.168.1.4:/u01/redis-3.2.0/
+
+//复制logstash
+scp /u01/logstash-2.3.1/prod/inner.conf /u01/redis-3.2.0/redis.conf 192.168.1.4:/u01/logstash-2.3.1/prod/
+
+//复制profile
+scp /etc/profile 192.168.1.4:/etc/profile
+
+
+scp /u01/logstash-2.3.1/prod/inner.conf /u01/redis-3.2.0/redis.conf 192.168.1.4:/u01/logstash-2.3.1/prod/jpro
+scp /u01/logstash-2.3.1/prod/inner.conf /u01/redis-3.2.0/redis.conf 192.168.1.4:/u01/logstash-2.3.1/prod/

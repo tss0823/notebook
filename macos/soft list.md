@@ -43,11 +43,11 @@
 * Sequel
 
 ## 其他
-Docker
-TorBrowser
-OBS   `(Open Broadcaster Software)开源的广播软件,用于录制和直播视频流`
-Mumu  `android 模拟器`
-Jeb  `apk逆向`
-ida `二进制反编译`
-Alfred `软件快捷搜索，比自带的好用`
+* Docker
+* TorBrowser
+* OBS   `(Open Broadcaster Software)开源的广播软件,用于录制和直播视频流`
+* Mumu  `android 模拟器`
+* Jeb  `apk逆向`
+* ida `二进制反编译`
+* Alfred `软件快捷搜索，比自带的好用`
 

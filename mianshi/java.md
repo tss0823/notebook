@@ -1,14 +1,17 @@
-j2se,j2ee
 ## 基础（熟悉java api）
-字符串
-容器类（ArrayList,HashMap,TreeMap,LinkedList,Set,Stack,Queue）
-工具类 （Collections,Calendar,System）
-IO/NIO
-net(URL,URLConnection,HttpURLConnection,Socket)
+* 字符串
+* 容器类（ArrayList,HashMap,TreeMap,LinkedList,Set,Stack,Queue）
+* 工具类 （Collections,Calendar,System）
+* IO/NIO
+* net(URL,URLConnection,HttpURLConnection,Socket)
 
 
 ## jvm
-类加载(顺序)，热部署，动态脚本，双亲委派机制/破坏双亲委派(setClassLoader,spi）
+* jvm 内存模型 （5大模型）
+* GC （7钟类型）
+* 类加载(7个阶段) ，双亲委派，三种破坏双亲委派
+
+
 
 ## 设计原则 （6大原则）
 * 开闭原则 `OCP，基于接口抽象开发，尽可能去扩展，而不是去修改`

@@ -41,3 +41,7 @@ http://114.55.57.142:8983/solr/admin/collections?action=ADDREPLICA&collection=yu
 //delete collection
 curl -XGET "http://localhost:8983/solr/admin/collections?action=DELETE&name=index_shop"
 
+
+## 监控
+Metrics  `java 服务器监控框架，可以翻译成度，指标`
+[](https://blog.csdn.net/mr_seaturtle_/article/details/76401173)

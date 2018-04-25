@@ -11,6 +11,11 @@ workerGroup 线程池 负责 IO read,write
 
 ## eventLoop
 
+## reactor模型
+* 单线程  (single)
+* 多线程 （accpet single,handdler multi）
+* 主从 （accept ,handler all multi）
+
 ##
 > 参考链接 [https://segmentfault.com/a/1190000007403873](https://segmentfault.com/a/1190000007403873)
 

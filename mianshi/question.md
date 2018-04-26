@@ -18,8 +18,8 @@
 
 ## 答案
 1. 因为他们是接口，克隆，序列化应该根据实现类有关
-2. LinkedHashMap 和 WeakHashMap 可以实现缓存容器，两者都可以自动回收旧的内存，LinkedHashMap 是通过 重写 `removeEldestEntry` 通过一个闸值决定是否删除老的，WeekHashMap 是通过虚拟机的垃圾回收弱引用。ConcurrentHashMap用户多线程环境
+2. LinkedHashMap 和 WeakHashMap 可以实现缓存容器，两者都可以自动回收旧的内存，LinkedHashMap 是通过 重写 `removeEldestEntry` 通过一个闸值决定是否删除老的，WeekHashMap是通过虚拟机的垃圾回收弱引用。ConcurrentHashMap用户多线程环境
 3.  
-4. 针对增删改采用`Sytem.arraycopy`方法，应用于当写时遍历操作较多的情况的多线程环境，也就是数组长度超大的情况
+4. 针对增删改采用`Sytem.arraycopy`方法，应用于当写时遍历操作较多的情况的多线程环境，也就是数组长度超大的情况
 5. https://yq.aliyun.com/articles/38340
 6. 

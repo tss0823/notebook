@@ -25,7 +25,7 @@
 7. 详见[java.md](jvm.md)的类加载介绍,static 修饰的准备阶段0 or null,初始化真正的值.final 修饰准备阶段赋值真正的值
 8. 详见[java.md](jvm.md)的GC介绍
 9. 
-10. 
+10. 4个方面，1 数据结构，2 内存管理，3 持久化，4 集群管理 
 11. Reactor 属于IO复用同步模型,Proactor属于IO异步模型。Reactor是在事件发生时就通知事先注册的事件（读写由处理函数完成）；Proactor是在事件发生时进行异步I/O（读写由OS完成），待IO完成事件分离器才调度处理器来处。
 12. IP和子网掩码转2进制相与 后，得到网络地址，网络地址一样则在一个子网.详见[https://zhidao.baidu.com/question/1822196323113238548.html](https://zhidao.baidu.com/question/1822196323113238548.html)
 

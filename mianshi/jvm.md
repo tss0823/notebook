@@ -5,6 +5,20 @@
 ## 内存结构
 ## GC
 
+### 调节参数
+* -Xms `初始堆大小，默认为物理内存的1/64(<1GB)；默认(MinHeapFreeRatio参数可以调整)空余堆内存小于40%时，JVM就会增大堆直到-Xmx的最大限制`
+* -Xmx `最大堆大小，默认(MaxHeapFreeRatio参数可以调整)空余堆内存大于70%时，JVM会减少堆直到 -Xms的最小限制`
+* -Xmn `新生代大小`
+* -Xss `栈大小`
+* -XX:SurvivorRatio `默认值为8。两个Survivor区与一个Eden区的比值为2:8`
+* -XX:PermSize `设置永久代(perm gen)初始值。默认值为物理内存的1/64`
+* -XX:MaxPermSize
+
+### 算法
+* 标记清理
+* 复制  `s1 s2 Edern`
+* 标记整理 `向一边移动`
+
 ### 性能诊断调优工具
 * jps
 * jmap  `histo,dump`
@@ -65,3 +79,7 @@ public static final int v = 8080;
 3. 调用类的静态方法
 4. 反射（如Class.forName("xxx")）
 5. 初始化某个类的子类，则其父类也会被初始化
+
+### 参考资料
+[http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html](http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html)
+[http://www.importnew.com/25295.html](http://www.importnew.com/25295.html)

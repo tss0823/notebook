@@ -1,25 +1,5 @@
-consumer
+## 模式
+* 点对点 `一次只有一个消费者收到消息`
+* 发布订阅 `订阅的消费者收到消息`
 
-producer
-
-//服务端
-broker
-
-topic/queue
-
-NameServer
-
-//
-sh mqnamesrv &
-
-sh mqbroker -n "10.45.54.140:9876" -c ../conf/2m-2s-async/broker-a.properties &
-
-sh mqbroker -n "10.45.54.140:9876" -c ../conf/2m-2s-async/broker-a-s.properties &
-
-
-//namesrv
-/u01/path/jdk1.7.0_79/bin/java  -server -Xms512m -Xmx512m -Xmn256m -XX:PermSize=128m -XX:MaxPermSize=320m -XX:+UseConcMarkSweepGC -XX:+UseCMSCompactAtFullCollection -XX:CMSInitiatingOccupancyFraction=70 -XX:+CMSParallelRemarkEnabled -XX:SoftRefLRUPolicyMSPerMB=0 -XX:+CMSClassUnloadingEnabled -XX:SurvivorRatio=8 -XX:+DisableExplicitGC -verbose:gc -Xloggc:/home/hongbao/rmq_srv_gc.log -XX:+PrintGCDetails -XX:-OmitStackTraceInFastThrow -Djava.ext.dirs=/u01/alibaba-rocketmq/bin/../lib -cp .:/u01/alibaba-rocketmq/bin/../conf: com.alibaba.rocketmq.namesrv.NamesrvStartup
-
-//broker
-/u01/path/jdk1.7.0_79/bin/java  -server -Xms512m -Xmx512m -Xmn256m -XX:PermSize=128m -XX:MaxPermSize=320m -XX:+UseConcMarkSweepGC -XX:+UseCMSCompactAtFullCollection -XX:CMSInitiatingOccupancyFraction=70 -XX:+CMSParallelRemarkEnabled -XX:SoftRefLRUPolicyMSPerMB=0 -XX:+CMSClassUnloadingEnabled -XX:SurvivorRatio=8 -XX:+DisableExplicitGC -verbose:gc -Xloggc:/home/hongbao/rmq_bk_gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:-OmitStackTraceInFastThrow -Djava.ext.dirs=/u01/alibaba-rocketmq/bin/../lib -cp .:/u01/alibaba-rocketmq/bin/../conf: com.alibaba.rocketmq.broker.BrokerStartup -n 10.45.54.140:9876 -c ../conf/2m-2s-async/broker-a.properties
-
+##

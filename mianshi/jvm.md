@@ -3,6 +3,16 @@
 ![](res/0.jpeg)
 
 ## 内存结构
+> 5大区域
+* 方法区 `常量池`
+* 栈 `局部变量表，操作数栈，动态链接，返回地址`
+* 堆
+* 本地方法栈
+* PC计数器
+
+### 内存溢排查
+* -XX:-HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./java_pid<pid>.hprof
+
 ## GC
 
 ### 调节参数
@@ -18,6 +28,11 @@
 * 标记清理
 * 复制  `s1 s2 Edern`
 * 标记整理 `向一边移动`
+
+### 监控方式
+* `jstat –gcutil` 来查看堆中各个内存区域的变化以及GC的工作状态
+* `-XX:+PrintGCDetails  –Xloggc:<file>`输出到日志文件来查看GC的状况
+* `jmap –heap`可用于查看各个内存空间的大小
 
 ### 性能诊断调优工具
 * jps

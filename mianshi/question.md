@@ -24,5 +24,6 @@
 5. https://yq.aliyun.com/articles/38340
 6. 
 7. 详见[java.md](jvm.md)的类加载介绍,static 修饰的准备阶段0 or null,初始化真正的值.final 修饰准备阶段赋值真正的值
-8. -Xms -Xmx -Xmn -Xss -MaxPersize
+8. 详见[java.md](jvm.md)的GC介绍
+9. 
 

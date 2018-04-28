@@ -35,21 +35,20 @@
 
 
 * 索引（Collection）的逻辑图
-![](res/0.png)
+* ![](res/0.png)
 
         
 * solr和索引对照图
-![](res/1.png)
+* ![](res/1.png)
 
 
 * 创建索引过程
-![](res/2.png)
+* ![](res/2.png)
 
         
 * 查询过程
-![](res/3.png)
+* ![](res/3.png)
 
-        
 * 索引分裂 (自动或手动触发)
 ![](res/4.png)
 

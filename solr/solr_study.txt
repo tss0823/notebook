@@ -7,4 +7,4 @@
 //ik for solr5
 https://github.com/EugenePig/ik-analyzer-solr5
 
-solr faccet,sugguest,highlight,
+solr facet,sugguest,highlight,

@@ -19,6 +19,12 @@
 在 solrconfig.xml 配置
 
 ## highlight
+> hl pre post
+
+## spell check
+> 相似或相近词
+
+## solrCloud
 
 ## 京东搜索研究
 类目/category
@@ -29,4 +35,7 @@
 > 手机类目：颜色，尺寸，网络，内存，存储，CPU,操作系统
 
 * 商品货品区别
+
+## 参考文献
+[http://lucene.apache.org/solr/guide/7_3/index.html](http://lucene.apache.org/solr/guide/7_3/index.html)
 

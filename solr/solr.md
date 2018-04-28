@@ -32,6 +32,7 @@
 
 ## solrCloud
 > 结构图
+
 * 索引（Collection）的逻辑图
 ![](res/0.png)
 

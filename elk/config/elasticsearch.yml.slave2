@@ -21,7 +21,7 @@ cluster.name: ec_cluster
 # Use a descriptive name for the node:
 #
 #node.name: node-slave2
-node.name: "node-2"
+node.name: "node-3"
 
 #add for shard
 node.master: false
@@ -32,7 +32,7 @@ node.data: true
 #
 node.rack: r2
 index.number_of_shards: 5 
-index.number_of_replicas: 3
+index.number_of_replicas: 2 
 #
 # ----------------------------------- Paths ------------------------------------
 #

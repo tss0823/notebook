@@ -54,6 +54,10 @@
 
 ## 索引数据迁移到HDFS
 
+## 路由
+一致性hash `elacticsearch 是通过 hash(docId) % numShards`
+
+
 ## 京东搜索研究
 类目/category
 属性/tag

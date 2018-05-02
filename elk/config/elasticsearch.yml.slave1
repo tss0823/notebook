@@ -31,7 +31,7 @@ node.data: true
 #
 node.rack: r1
 index.number_of_shards: 5 
-index.number_of_replicas: 3
+index.number_of_replicas: 2
 #
 # ----------------------------------- Paths ------------------------------------
 #

@@ -59,6 +59,15 @@ solr-7.3.0/example/cloud/node2/solr/films_shard1_replica_n2/data/index
 ## 路由
 一致性hash `elacticsearch 是通过 hash(docId) % numShards`
 
+## vs elasticsearch
+* 分布式，solr通过zookeeper实现，es一开始就设计为分布式
+* 索引格式，es支持json,solr支持json/scv/xml/html/pdf/office
+* 处理多租户（对同一node建立多种索引）不需要特殊配置，而Solr则需要更多的高级设置
+* 实时性，solr建索引时不能同时搜索，es实时搜索
+* 扩展功能，比如监控，Solr 官方提供的功能更多，而 Elasticsearch 本身更注重于核心功能，高级功能多有第三方插件提供
+* 路由,solr一致性hash,elacticsearch 是通过 hash(docId) % numShards
+* 数据存储方式
+* 
 
 ## 京东搜索研究
 类目/category

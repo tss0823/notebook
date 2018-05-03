@@ -33,6 +33,8 @@
 ## solrCloud
 > 结构图
 
+### 索引目录结构
+solr-7.3.0/example/cloud/node2/solr/films_shard1_replica_n2/data/index
 
 * **索引（Collection）的逻辑图**
 * ![](res/0.png)

@@ -61,13 +61,17 @@ bootstrap.mlockall: true
 #
 
 network.bind_host: 0.0.0.0 
+#同时设置bind_host和publish_host上面两个参数 
 #network.host: 0.0.0.0
 
+#设置其它节点和该节点交互的ip地址,如果不设置它会自动设置,值必须是个真实的ip地址 
 network.publish_host: 10.45.54.140
 #
 # Set a custom port for HTTP:
 #
+#设置对外服务的http端口,默认为9200
 http.port: 9200
+#设置节点间交互的tcp端口
 transport.tcp.port: 9300
 transport.tcp.compress: true 
 

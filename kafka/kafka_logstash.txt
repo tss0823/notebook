@@ -129,20 +129,3 @@ partition的个数一致，这样效果最佳且能保证partition内的数据�
 http://bigbo.github.io/pages/2015/08/07/logstash_kafka_new/
 http://soft.dog/2016/01/08/logstash-plugins/
 http://www.rittmanmead.com/2015/10/forays-into-kafka-01-logstash-transport-centralisation/
-
-
-
-
-
-有什么问题 可以扫码关注微信公众号：我是攻城师(woshigcs)，在后台留言咨询。
-
-本公众号的内容是有关搜索和大数据技术和互联网等方面内容的分享，也是一个温馨的技术互动交流的小家园
-
-
-
-Logstash与Kafka集成
-« 教您使用java爬虫gecco抓取JD全部商品信息（一）
-总结一下app提交审核不通过的经历 »
-所有文章	所有文章
-Copyright © 北京中联互动科技发展有限公司
-地址: 鲁谷重聚园三期甲18号楼 联系电话:13051898268 北京兆维机房 北京服务器托管

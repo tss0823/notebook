@@ -27,7 +27,27 @@
 > 不单单只有公钥、私钥，还有数字签名。私钥加密生成数字签名，公钥验证数据及签名。
 ### ECC(Elliptic Curves Cryptography，椭圆曲线密码编码学)
 
+## 证书
+
+## 单向认证 AND 双向认证
+
+## 证书转换
+> JKS和PKCS#12 相互转换 [详细](http://snowolf.iteye.com/blog/735294)
+* 通过keytool密钥库导入命令importkeystore，将密钥库格式由PKCS#12转换为JKS。
+* 检索新生成的密钥库文件，提取别名信息。
+* 由密钥库文件导出数字证书（这里将用到别名）。
+* 通过代码提取公钥/私钥、签名算法等
+
+## 工具
+### keytool
+> 制作证书，生成 keystore,导出证书cer
+
+### jarsigner
+> 代码签名 对jar,apk
+> -verify 和 -verbose 签名和验证签名，验证签名，无需指定文件路径
+
+### openssl (生成根证书)
 
 ## 参考资料
 [http://snowolf.iteye.com/blog/379860](http://snowolf.iteye.com/blog/379860)
-
+[https://blog.csdn.net/yangxt/article/details/1796965](https://blog.csdn.net/yangxt/article/details/1796965)

@@ -34,6 +34,12 @@ allkeys-random -> remove a random key, any key
 volatile-ttl -> remove the key with the nearest expire time (minor TTL)
 noeviction -> don't expire at all, just return an error on write operations
 
+## vs memcached
+* 数据结构，redis 有5种，memcached key-value
+* 分布式，reddis 负载主从，memcached 通过外部client 环状hash
+* 内存模型，redis，memcached 预分配，chunk,Slab Class,Slab Allocation
+* 持久化，redis 快照，aof,memcached 没有
+
 ## 参考资料
 [http://redisbook.readthedocs.io/en/latest/internal/aof.html](http://redisbook.readthedocs.io/en/latest/internal/aof.html)
 [https://yq.aliyun.com/articles/67122](https://yq.aliyun.com/articles/67122)

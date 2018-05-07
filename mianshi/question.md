@@ -4,7 +4,7 @@
 3. Arrays.sort的实现
 4. 什么时候使用CopyOnWriteArrayList
 5. ReentrantLock和synchronized 区别
-6. AQS的实现原理
+6.  
 7. 类加载机制的步骤，每一步做了什么，static和final修改的成员变量的加载时机
 8. jvm参数的设置和jvm调优
 9. 什么情况产生年轻代内存溢出、什么情况产生年老代内存溢出
@@ -13,6 +13,7 @@
 12. ip问题 如何判断ip是否在多个ip段中
 13. SOA和微服务的区别
 14. 常用排序算法，二分查找，链表相关，数组相关，字符串相关，树相关等
+15、B树和B+树的区别
 
 
 
@@ -32,3 +33,4 @@
 12. IP和子网掩码转2进制相与 后，得到网络地址，网络地址一样则在一个子网.详见[https://zhidao.baidu.com/question/1822196323113238548.html](https://zhidao.baidu.com/question/1822196323113238548.html)
 13. [https://www.zhihu.com/question/37808426](https://www.zhihu.com/question/37808426),SOA和微服务都是跨语言，跨平台，相比SAO,微服务高效开发，便捷构建部署，更轻量级，服务拆分更单一，去中心化，去ESB,微服务倡导细粒度，重用组合.部署打包自动化通过结合docker.微服务更多为了可扩充性、负载均衡以及提高吞吐量而去分解应用.
 14. 
+16. https://www.zhihu.com/question/57466414

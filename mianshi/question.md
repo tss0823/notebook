@@ -4,7 +4,7 @@
 3. Arrays.sort的实现
 4. 什么时候使用CopyOnWriteArrayList
 5. ReentrantLock和synchronized 区别
-6.  
+6. AQS的实现
 7. 类加载机制的步骤，每一步做了什么，static和final修改的成员变量的加载时机
 8. jvm参数的设置和jvm调优
 9. 什么情况产生年轻代内存溢出、什么情况产生年老代内存溢出
@@ -20,7 +20,7 @@
 
 ## 答案
 1. 因为他们是接口，克隆，序列化应该根据实现类有关
-2. LinkedHashMap 和 WeakHashMap 可以实现缓存容器，两者都可以自动回收旧的内存，LinkedHashMap 是通过 重写 `removeEldestEntry` 通过一个闸值决定是否删除老的，WeekHashMap是通过虚拟机的垃圾回收弱引用。ConcurrentHashMap用户多线程环境
+2. LinkedHashMap 和 WeakHashMap 可以实现缓存容器，两者都可以自动回收旧的内存，LinkedHashMap 是通过 重写 `removeEldestEntry` 通过一个闸值决定是否删除老的，WeakHashMap是通过虚拟机的垃圾回收弱引用。ConcurrentHashMap用户多线程环境
 3.  
 4. 针对增删改采用`Sytem.arraycopy`方法，应用于当写时遍历操作较多的情况的多线程环境，也就是数组长度超大的情况
 5. [https://yq.aliyun.com/articles/38340](https://yq.aliyun.com/articles/38340)
@@ -33,4 +33,4 @@
 12. IP和子网掩码转2进制相与 后，得到网络地址，网络地址一样则在一个子网.详见[https://zhidao.baidu.com/question/1822196323113238548.html](https://zhidao.baidu.com/question/1822196323113238548.html)
 13. [https://www.zhihu.com/question/37808426](https://www.zhihu.com/question/37808426),SOA和微服务都是跨语言，跨平台，相比SAO,微服务高效开发，便捷构建部署，更轻量级，服务拆分更单一，去中心化，去ESB,微服务倡导细粒度，重用组合.部署打包自动化通过结合docker.微服务更多为了可扩充性、负载均衡以及提高吞吐量而去分解应用.
 14. 
-16. https://www.zhihu.com/question/57466414
+15. https://www.zhihu.com/question/57466414

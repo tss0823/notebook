@@ -29,6 +29,12 @@
 * 复制  `s1 s2 Edern`
 * 标记整理 `向一边移动`
 
+### GC 回收器（7种）
+* 新生代：Serial       ParNew       Parrallel Scanvenge
+* 老年代：Serial Old                Parrallel Old   CMS
+* G1 
+* minor GC AND Full Gc分别在什么时候发生
+
 ### 监控方式
 * `jstat –gcutil` 来查看堆中各个内存区域的变化以及GC的工作状态
 * `-XX:+PrintGCDetails  –Xloggc:<file>`输出到日志文件来查看GC的状况

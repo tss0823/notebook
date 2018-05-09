@@ -33,4 +33,5 @@
 12. IP和子网掩码转2进制相与 后，得到网络地址，网络地址一样则在一个子网.详见[https://zhidao.baidu.com/question/1822196323113238548.html](https://zhidao.baidu.com/question/1822196323113238548.html)
 13. [https://www.zhihu.com/question/37808426](https://www.zhihu.com/question/37808426),SOA和微服务都是跨语言，跨平台，相比SAO,微服务高效开发，便捷构建部署，更轻量级，服务拆分更单一，去中心化，去ESB,微服务倡导细粒度，重用组合.部署打包自动化通过结合docker.微服务更多为了可扩充性、负载均衡以及提高吞吐量而去分解应用.
 14. 
-15. https://www.zhihu.com/question/57466414
+15. B+Tree 优势，缩短层高，减少检索时间，去掉data Record 指针。叶子节点链表，实现顺序遍历。
+https://www.zhihu.com/question/57466414

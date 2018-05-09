@@ -47,12 +47,6 @@
 * 开个新的线程dump
 * 序列化文件头，DateTree
 
-
-
 ### java客户端 (Dubbu 都在用)
-ZkClient
-## 目标
-
-## 客户端
-* Curator
 * ZkClient
+* Curator

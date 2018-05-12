@@ -34,6 +34,7 @@
 * 老年代：Serial Old                Parrallel Old   CMS
 * G1 
 * minor GC AND Full Gc分别在什么时候发生
+* jdk1.8 永久代 用 元空间替换了，元空间使用的是本地内存，字符变量放到了heap space,方法区放到了元空间。
 
 ### 监控方式
 * `jstat –gcutil` 来查看堆中各个内存区域的变化以及GC的工作状态
@@ -101,6 +102,10 @@ public static final int v = 8080;
 4. 反射（如Class.forName("xxx")）
 5. 初始化某个类的子类，则其父类也会被初始化
 
-### 参考资料
+## jvm 调优
+### jconsole,jvisualvm
+> jvisualvm 监控cpu,垃圾回收活动，堆的使用，元空间的使用，线程，检测死锁
+
+## 参考资料
 [http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html](http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html)
 [http://www.importnew.com/25295.html](http://www.importnew.com/25295.html)

@@ -30,7 +30,7 @@
 
 ## 拦截器
 * java bean handler method执行拦截器 （HandlerInterceptorAdapter）
-* 
+* WebRequestInterceptor `url 请求的拦截`
 
 ## 注解
 * @Configuration  等价 spring-application.xml 配置

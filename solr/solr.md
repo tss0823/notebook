@@ -80,5 +80,5 @@ solr-7.3.0/example/cloud/node2/solr/films_shard1_replica_n2/data/index
 * 商品货品区别
 
 ## 参考文献
-[http://lucene.apache.org/solr/guide/7_3/index.html](http://lucene.apache.org/solr/guide/7_3/index.html)
-[https://blog.csdn.net/clj198606061111/article/details/21816985](https://blog.csdn.net/clj198606061111/article/details/21816985)
+* [http://lucene.apache.org/solr/guide/7_3/index.html](http://lucene.apache.org/solr/guide/7_3/index.html)
+* [https://blog.csdn.net/clj198606061111/article/details/21816985](https://blog.csdn.net/clj198606061111/article/details/21816985)

@@ -69,5 +69,5 @@ Engine > Host > Context > Wrapper
 
 
 ## 资料
-[https://www.ibm.com/developerworks/cn/java/j-lo-tomcat1/](https://www.ibm.com/developerworks/cn/java/j-lo-tomcat1/)
-[https://www.cnblogs.com/diegodu/p/5915300.html](https://www.cnblogs.com/diegodu/p/5915300.html)
+* [https://www.ibm.com/developerworks/cn/java/j-lo-tomcat1/](https://www.ibm.com/developerworks/cn/java/j-lo-tomcat1/)
+* [https://www.cnblogs.com/diegodu/p/5915300.html](https://www.cnblogs.com/diegodu/p/5915300.html)

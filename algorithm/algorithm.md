@@ -37,5 +37,5 @@
 
 
 ## 参考资料
-[算法 第四版](https://algs4.cs.princeton.edu/home/)
-[大O表示法](https://www.jianshu.com/p/59d09b9cee58)
+* [算法 第四版](https://algs4.cs.princeton.edu/home/)
+* [大O表示法](https://www.jianshu.com/p/59d09b9cee58)

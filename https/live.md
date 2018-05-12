@@ -16,6 +16,6 @@
 hls 索引文件
 
 ## 资料
-[https://www.zhihu.com/question/47504661](https://www.zhihu.com/question/47504661)
-[http://www.samirchen.com/ios-rtmp-vs-hls/](http://www.samirchen.com/ios-rtmp-vs-hls/)
-[https://blog.csdn.net/cabbage2008/article/details/50522190](https://blog.csdn.net/cabbage2008/article/details/50522190)
+* [https://www.zhihu.com/question/47504661](https://www.zhihu.com/question/47504661)
+* [http://www.samirchen.com/ios-rtmp-vs-hls/](http://www.samirchen.com/ios-rtmp-vs-hls/)
+* [https://blog.csdn.net/cabbage2008/article/details/50522190](https://blog.csdn.net/cabbage2008/article/details/50522190)

@@ -50,8 +50,8 @@ Redis 的 Sentinel 系统用于管理多个 Redis 服务器（instance）， 该
 
 
 ## 参考资料
-[http://redisbook.readthedocs.io/en/latest/internal/aof.html](http://redisbook.readthedocs.io/en/latest/internal/aof.html)
-[https://yq.aliyun.com/articles/67122](https://yq.aliyun.com/articles/67122)
-[https://www.biaodianfu.com/redis-vs-memcached.html](https://www.biaodianfu.com/redis-vs-memcached.html)
-[主从集群](https://blog.csdn.net/u011204847/article/details/51307044)
-[sentinel](https://blog.csdn.net/u011204847/article/details/51307044)
+* [http://redisbook.readthedocs.io/en/latest/internal/aof.html](http://redisbook.readthedocs.io/en/latest/internal/aof.html)
+* [https://yq.aliyun.com/articles/67122](https://yq.aliyun.com/articles/67122)
+* [https://www.biaodianfu.com/redis-vs-memcached.html](https://www.biaodianfu.com/redis-vs-memcached.html)
+* [主从集群](https://blog.csdn.net/u011204847/article/details/51307044)
+* [sentinel](https://blog.csdn.net/u011204847/article/details/51307044)

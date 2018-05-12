@@ -38,4 +38,4 @@ SKU是物理上不可分割的最小存货单元。在使用时要根据不同�
 
 
 ## 资料
-[https://www.zhihu.com/question/29073730/answer/85110369](https://www.zhihu.com/question/29073730/answer/85110369)
+* [https://www.zhihu.com/question/29073730/answer/85110369](https://www.zhihu.com/question/29073730/answer/85110369)

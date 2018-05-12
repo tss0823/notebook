@@ -14,5 +14,5 @@
 * 依赖 带箭头的虚线，指向被使用者，是一种使用的关系，人计算机
 
 ## 资料
-[http://www.uml.org.cn/oobject/201610282.asp](http://www.uml.org.cn/oobject/201610282.asp)
-[https://blog.csdn.net/a19881029/article/details/8957441](https://blog.csdn.net/a19881029/article/details/8957441)
+* [http://www.uml.org.cn/oobject/201610282.asp](http://www.uml.org.cn/oobject/201610282.asp)
+* [https://blog.csdn.net/a19881029/article/details/8957441](https://blog.csdn.net/a19881029/article/details/8957441)

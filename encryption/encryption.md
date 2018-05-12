@@ -49,5 +49,5 @@
 ### openssl (生成根证书)
 
 ## 参考资料
-[http://snowolf.iteye.com/blog/379860](http://snowolf.iteye.com/blog/379860)
-[https://blog.csdn.net/yangxt/article/details/1796965](https://blog.csdn.net/yangxt/article/details/1796965)
+* [http://snowolf.iteye.com/blog/379860](http://snowolf.iteye.com/blog/379860)
+* [https://blog.csdn.net/yangxt/article/details/1796965](https://blog.csdn.net/yangxt/article/details/1796965)

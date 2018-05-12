@@ -10,5 +10,5 @@
 * 
 
 ## 参考资料
-[https://blog.csdn.net/zhanglianhai555/article/category/7023254](https://blog.csdn.net/zhanglianhai555/article/category/7023254)
-[vs kafka](https://blog.csdn.net/damacheng/article/details/42846549)
+* [https://blog.csdn.net/zhanglianhai555/article/category/7023254](https://blog.csdn.net/zhanglianhai555/article/category/7023254)
+* [vs kafka](https://blog.csdn.net/damacheng/article/details/42846549)

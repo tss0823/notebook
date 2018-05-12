@@ -34,7 +34,7 @@
 * Simple `需要安装simple节点`
 
 ## 资料
-[https://github.com/apache/incubator-dubbo](https://github.com/apache/incubator-dubbo)
+* [https://github.com/apache/incubator-dubbo](https://github.com/apache/incubator-dubbo)
 
 
 

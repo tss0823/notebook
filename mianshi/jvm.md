@@ -107,5 +107,5 @@ public static final int v = 8080;
 > jvisualvm 监控cpu,垃圾回收活动，堆的使用，元空间的使用，线程，检测死锁
 
 ## 参考资料
-[http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html](http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html)
-[http://www.importnew.com/25295.html](http://www.importnew.com/25295.html)
+* [http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html](http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html)
+* [http://www.importnew.com/25295.html](http://www.importnew.com/25295.html)

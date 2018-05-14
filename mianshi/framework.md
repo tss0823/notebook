@@ -15,3 +15,22 @@
 > [资料](https://blog.csdn.net/whereismatrix/article/details/53465722)
 
 ### 分布式一致性 CAP,BASE
+
+## 架构设计原则
+### 高并发
+拆分，服务化，消息队列，缓存
+
+### 高可用
+集群，限流，降级
+
+### 业务设计
+幂等，防重，状态机
+
+### 限流方式
+* 滑动窗口协议
+* 漏桶算法
+* 控制传输速率的算法
+* 令牌桶算法
+
+tcp 时间窗口演示
+https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/selective-repeat-protocol/index.html

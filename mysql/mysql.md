@@ -13,6 +13,8 @@
 * 物理上 能分配连续的文件block
 * 查询 B+Tree 更简单
 
+## 怎样提高缓存命中率
+
 ## 文件
 * 参数文件
 * 日志文件
@@ -30,10 +32,17 @@
 ## 二进制日志和重做日志的区别
 > 二进制是逻辑上sql,重做日志是物理上
 
-## 
+
 
 ## redo undo
 > redo log 也称重做日志，用来保证事务的原子性和持久性。undo log 用来保证事务的一致性
+
+## 调优
+* CPU，看是OLAP,还是OLTP系统，OLAP是cpu密集型，很多比较，排序计算，OLTP是IO密集型，时间短，sql简单。innodb_read_io_threads,innodb_write_io_threads 调大来增加IO的线程。
+* 操作系统64，内存使用>4G
+* 文件系统，windows默认NTFS,Linux EXT3,EXT4,XFS
+* 测试工具 sysbench,tpcc-mysql
+
 
 ## 参考资料
 [https://www.cnblogs.com/xinysu/p/6555082.html](https://www.cnblogs.com/xinysu/p/6555082.html)

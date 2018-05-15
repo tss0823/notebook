@@ -11,9 +11,15 @@
 * 前序遍历 根左右
 * 中序遍历 左根右
 * 后序遍历 左右根
+### AVL树（平衡二叉树），红黑树(RBTree)
+### B/B+树
+### Trie树 (字典树)
+
+### 
 
 ## 堆
 ## 图
+
 ## 排序算法
 ### 冒泡排序    
 ### 快速排序
@@ -40,3 +46,4 @@
 * [算法 第四版](https://algs4.cs.princeton.edu/home/)
 * [大O表示法](https://www.jianshu.com/p/59d09b9cee58)
 * [http://bigocheatsheet.com/](http://bigocheatsheet.com/)
+* [https://www.zhihu.com/question/30527705](https://www.zhihu.com/question/30527705)

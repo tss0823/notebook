@@ -13,7 +13,8 @@
 12. ip问题 如何判断ip是否在多个ip段中
 13. SOA和微服务的区别
 14. 常用排序算法，二分查找，链表相关，数组相关，字符串相关，树相关等
-15、B树和B+树的区别
+15. B树和B+树的区别
+16. Comparable 和Comparator的区别
 
 
 
@@ -35,3 +36,5 @@
 14. 
 15. B+Tree 优势，缩短层高，减少检索时间，去掉data Record 指针。叶子节点链表，实现顺序遍历。
 https://www.zhihu.com/question/57466414
+16. Comparable 是内部的比较器，Comparator 是外部比较器，在Colletions 作为参数传递
+

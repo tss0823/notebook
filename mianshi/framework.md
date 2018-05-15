@@ -30,7 +30,13 @@
 * 滑动窗口协议
 * 漏桶算法
 * 控制传输速率的算法
-* 令牌桶算法
+* 令牌桶算法 guava RateLimiter + redis lua
 
 tcp 时间窗口演示
 https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/selective-repeat-protocol/index.html
+
+## 负载均衡
+* GSLB 是英文Global Server Load Balance
+* Nginx
+* LVS
+* F5

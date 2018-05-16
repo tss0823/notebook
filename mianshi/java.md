@@ -28,6 +28,10 @@
 * 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。
 
 
+* 单例模式，懒汉（延迟加载），饿汉（直接初始化了），双检锁/双重校验锁（DCL，即 double-checked locking),静态内部类
+* 工厂模式，
+* 适配器模式，装饰模式都是一个包装模式（Wrapper）,适配器改变接口保持功能(InputStreamReade,StreamDecoder)。装饰改变功能保持接口（InputStreamBuffer）
 * 门面模式/外观模式，Facade, Tomcat StanderWrapperFacade 作为 StanderWrapper 和 Servlet 的门面
+* 观察者模式/订阅发布模式，java 内置了，Observable 抽象主题/被观察者，负责addObserver，触发事件（setChanged，notifyObservers），Observer 观察者，通过update回调触发业务
 
 

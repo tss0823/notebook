@@ -56,4 +56,4 @@
 
 ## 资料
 * [https://www.cnblogs.com/domi22/p/8046796.html](https://www.cnblogs.com/domi22/p/8046796.html)
-* [线程流程图]  (https://www.uml-diagrams.org/java-thread-uml-state-machine-diagram-example.html)
+* [线程流程图](https://www.uml-diagrams.org/java-thread-uml-state-machine-diagram-example.html)

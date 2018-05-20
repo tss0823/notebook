@@ -32,8 +32,8 @@ Engine > Host > Context > Wrapper
 
 ## Tomcat 类加载器
 ### 类加载顺序
-> bootClassLoader > WebappClassLoade
-> jdk > tomcat lib > webapp classes > webapp lib jar
+> bootClassLoader > WebappClassLoader
+> tomcat lib > webapp classes > webapp lib jar
 
 ### 加载jar 顺序
 > 根据字母排序

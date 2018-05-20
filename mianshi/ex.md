@@ -38,7 +38,13 @@ a 线程每秒钟 打印count++,b 线程监控count=10 关掉a,b 也结束
 spring cloud 应用网关
 
 ## 人力窝
-mq 
+mq 幂等 producer > servername > customer
+
+## 小v客
+* 一分钟内限制接口调用次数 (redis setnx setex)
+* tree 表 根据path 查询所有的子节点
+
+
 
 
 

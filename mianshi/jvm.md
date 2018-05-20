@@ -25,9 +25,9 @@
 * -XX:MaxPermSize
 
 ### 算法
-* 标记清理
-* 复制  `s1 s2 Edern`
-* 标记整理 `向一边移动`
+* 复制 主要针对新生代 `s1 s2 Edern`
+* 标志清除 针对老年代
+* 标记整理 针对老年代 cms `向一边移动`
 
 ### GC 回收器（7种）
 * 新生代：Serial       ParNew       Parrallel Scanvenge
@@ -35,6 +35,13 @@
 * G1 
 * minor GC AND Full Gc分别在什么时候发生
 * jdk1.8 永久代 用 元空间替换了，元空间使用的是本地内存，字符变量放到了heap space,方法区放到了元空间。
+
+### GC 应用场景
+* Serial收集器，客户端模式，桌面应用场景,单核cpu
+* ParNew，server模式下首选，只有它嫩个跟cms结合使用
+* Parallel Scavenge（并行回收）收集器，该收集器的目标是达到一个可控制的吞吐量（Throughput）,吞吐量=运行用户代码时间/（运行用户代码时间+垃圾收集时间）,主要适合在后台运算而不需要太多交互的任务
+* CMS(Concurrent Mark Sweep)，主要优点：并发收集，低停顿。应用场景 响应速度，希望系统停顿时间最短，以给用户带来较好的体验，-XX:CMSInitiatingOccupancyFraction浮动百分比触发回收 
+* G1,jdk1.7出现，面向服务端应用，针对具有大内存、多处理器的机器
 
 ### 监控方式
 * `jstat –gcutil` 来查看堆中各个内存区域的变化以及GC的工作状态
@@ -91,7 +98,7 @@ public static final int v = 8080;
 
 ### 初始化
 顺序
-1 .按代码顺序递归加载静态成员/代码块,先父类再本类
+1. 按代码顺序递归加载静态成员/代码块,先父类再本类
 2. 按代码顺序递归加载非静态成员/代码块,先父类再本类
 3. 按代码顺序递归调用构造函数,先父类再本类
 
@@ -109,3 +116,4 @@ public static final int v = 8080;
 ## 参考资料
 * [http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html](http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html)
 * [http://www.importnew.com/25295.html](http://www.importnew.com/25295.html)
+* [JVM(HotSpot) 7种垃圾收集器的特点及使用场景](https://blog.csdn.net/tjiyu/article/details/53983650) 

@@ -6,6 +6,14 @@
 ## volatile,synchronized,reentrantLock
 
 ## 线程的生命周期
+* new
+* runnable (ready,running)
+* wait
+* timed_wait
+* block
+* terminated
+![](res/2.png)
+
 
 ## java 线程池创建的方式（通过 Exectors 4种）
 * newCache
@@ -47,5 +55,5 @@
 刚刚说到的线程池大小的经验值，其实是这种公式的一种估算值
 
 ## 资料
-[https://www.cnblogs.com/domi22/p/8046796.html](https://www.cnblogs.com/domi22/p/8046796.html)
-[]
+* [https://www.cnblogs.com/domi22/p/8046796.html](https://www.cnblogs.com/domi22/p/8046796.html)
+* [线程流程图]  (https://www.uml-diagrams.org/java-thread-uml-state-machine-diagram-example.html)

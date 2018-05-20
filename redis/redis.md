@@ -39,6 +39,7 @@ noeviction -> don't expire at all, just return an error on write operations
 * 分布式，reddis 负载主从，memcached 通过外部client 环状hash
 * 内存模型，redis，memcached 预分配，chunk,Slab Class,Slab Allocation
 * 持久化，redis 快照，aof,memcached 没有
+* IO模型，redis是单线程+io多路复用：检查文件描述的就绪状态，memcached 是多线程+锁
 
 ## sentinel (哨兵)
 Redis 的 Sentinel 系统用于管理多个 Redis 服务器（instance）， 该系统执行以下三个任务

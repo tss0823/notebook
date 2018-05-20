@@ -15,6 +15,7 @@
 14. 常用排序算法，二分查找，链表相关，数组相关，字符串相关，树相关等
 15. B树和B+树的区别
 16. Comparable 和Comparator的区别
+17. 分布式锁的实现
 
 
 
@@ -37,4 +38,5 @@
 15. B+Tree 优势，缩短层高，减少检索时间，去掉data Record 指针。叶子节点链表，实现顺序遍历。
 https://www.zhihu.com/question/57466414
 16. Comparable 是内部的比较器，Comparator 是外部比较器，在Colletions 作为参数传递
+17. 有3种方案，db,redis,zookeeper
 

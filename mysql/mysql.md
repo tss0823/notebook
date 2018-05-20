@@ -43,6 +43,16 @@
 * 文件系统，windows默认NTFS,Linux EXT3,EXT4,XFS
 * 测试工具 sysbench,tpcc-mysql
 
+## 哪些条件不走索引
+1. null 值判断；
+2. != , <> 操作符；
+3. or(大多数情况下)；
+4. in（大多数情况下）；
+5. like的使用（大多数情况下）；
+6. where 子句中对字段进行表达式操作,eg： select id from t where num/2=100 ；
+7. 在 where 子句中对字段进行函数操作
+8. 在 where 子句中的“=”左边进行函数、算术运算或其他表达式运算；
+
 
 ## 参考资料
 [https://www.cnblogs.com/xinysu/p/6555082.html](https://www.cnblogs.com/xinysu/p/6555082.html)

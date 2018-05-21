@@ -40,6 +40,28 @@
 
 ![](res/0.png) 
 
+## 空间换时间
+* 缓存 & 缓冲
+* hash
+
+## 时间换空间
+* 虚拟内存
+* redis 快照
+
+```
+// 时优先
+void swap(int a, int b)
+{
+	int c; c=a; a=b;b=c;
+}
+
+//--->空优 
+void swap(int a, int b)
+{
+	a=a+b;b=a-b;a=a-b; 
+}
+```
+
 
 
 ## 参考资料

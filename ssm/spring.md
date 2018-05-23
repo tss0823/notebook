@@ -45,5 +45,16 @@
 * Spring Cloud
 * Spring Cloud Data Flow
 
+## 三大核心接口机制及作用
+> BeanFactory、ApplicationContext、WebApplicationContext
+
+## bean的作用域
+* singleton：在IOC容器中仅存在一个Bean实例，Bean以单例方式存在，外部引用都指向这个Bean。
+* prototype：每次调用Bean都返回一个新实例。
+* request：在同一个Http请求的Bean相同，每个Http请求创建一个新的Bean。
+* session：在Http请求对应同一个session时对应同一个Bean。
+* globalSession：一般的web应用中globalSession等价于session，只有在portlet web应用中才存在globalSession概念。
+
 ## 资料
 * [annotation](https://blog.csdn.net/achenyuan/article/details/72786759)
+* [三大核心接口机制及作用](https://blog.csdn.net/rcj183419/article/details/54708505)

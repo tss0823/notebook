@@ -44,6 +44,13 @@ mq 幂等 producer > servername > customer
 * 一分钟内限制接口调用次数 (redis setnx setex)
 * tree 表 根据path 查询所有的子节点
 
+## 大搜车
+* hash钝化，hash冲突怎么解决
+* spring @service 怎么来实例化 （通过小写开头的类名做为id）
+* 库存冻结，调第三方支付，库存--,在高并发下怎么解决 （tcc 方式）
+* like %?% 怎么解决 （建立全文索引）
+* order by 数据库这层原理
+
 
 
 

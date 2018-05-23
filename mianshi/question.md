@@ -16,7 +16,10 @@
 15. B树和B+树的区别
 16. Comparable 和Comparator的区别
 17. 分布式锁的实现
-
+18. session的活化于钝化
+19. 解决hash冲突的方式
+20. tcp滑动窗口的作用
+21. ThreadLocal 原理
 
 
 
@@ -39,4 +42,8 @@
 https://www.zhihu.com/question/57466414
 16. Comparable 是内部的比较器，Comparator 是外部比较器，在Colletions 作为参数传递
 17. 有3种方案，db,redis,zookeeper
+18. 
+19. 开放定址法，链地址法
+20. CP的滑动窗口主要有两个作用，一是提供TCP的可靠性，二是提供TCP的流控特性
+21. Thread 的一个map对象，set value值，将本对象作为key。在put remove会清空value=null的map元素。
 

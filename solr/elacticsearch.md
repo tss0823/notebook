@@ -3,7 +3,7 @@
 index.number_of_shards: 5 
 index.number_of_replicas: 2
 ```
-表示每个节点5个分片，每个分片包含2个副本分片，总共15个分片，正好可以配置3个节点
+表示5个分片，每个分片包含2个副本分片，总共15个分片，正好可以配置3个节点
 
 ### 目录结构
 elasticsearch_1/data/ec_cluster/nodes/0/indices/stack_log-2018.05/4/index/
@@ -38,6 +38,9 @@ elasticsearch_1/data/ec_cluster/nodes/0/indices/stack_log-2018.05/4/index/
 它将请求转发到主分片所在的 Node 3 。
 Node 3 从主分片检索文档，修改 _source 字段中的 JSON ，并且尝试重新索引主分片的文档。 如果文档已经被另一个进程修改，它会重试步骤 3 ，超过 retry_on_conflict 次后放弃。
 如果 Node 3 成功地更新文档，它将新版本的文档并行转发到 Node 1 和 Node 2 上的副本分片，重新建立索引。 一旦所有副本分片都返回成功， Node 3 向协调节点也返回成功，协调节点向客户端返回成功。
+
+## es 乐观锁
+> 通过版本号，在Elasticsearch中，更新请求实际上是分为两个阶段，获取文档，修改文档，然后保存文档。 
 
 ## 路由
 shard = hash(routing) % number_of_primary_shards `routing 默认为_id`

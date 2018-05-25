@@ -57,7 +57,11 @@ solr-7.3.0/example/cloud/node2/solr/films_shard1_replica_n2/data/index
 ## 索引数据迁移到HDFS
 
 ## 路由
-一致性hash `elacticsearch 是通过 hash(docId) % numShards`
+> 一致性hash `elacticsearch 是通过 hash(docId) % numShards`
+> sliceHash(route, sdoc, params, collection) 得到hash ,然后再分配到环状hash桶中
+
+## 分片如何分配到节点
+> 通过权重，节点权重，索引权重，最终权重
 
 ## vs elasticsearch
 * 分布式，solr通过zookeeper实现，es一开始就设计为分布式
@@ -67,7 +71,7 @@ solr-7.3.0/example/cloud/node2/solr/films_shard1_replica_n2/data/index
 * 扩展功能，比如监控，Solr 官方提供的功能更多，而 Elasticsearch 本身更注重于核心功能，高级功能多有第三方插件提供
 * 路由,solr一致性hash,elacticsearch 是通过 hash(docId) % numShards
 * 数据存储方式
-* 
+
 
 ## 京东搜索研究
 类目/category
@@ -82,3 +86,4 @@ solr-7.3.0/example/cloud/node2/solr/films_shard1_replica_n2/data/index
 ## 参考文献
 * [http://lucene.apache.org/solr/guide/7_3/index.html](http://lucene.apache.org/solr/guide/7_3/index.html)
 * [https://blog.csdn.net/clj198606061111/article/details/21816985](https://blog.csdn.net/clj198606061111/article/details/21816985)
+* [solr vs es 路由方式](https://www.jianshu.com/p/8f5a5eff9325)

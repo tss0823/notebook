@@ -70,6 +70,11 @@
 7. 在 where 子句中对字段进行函数操作
 8. 在 where 子句中的“=”左边进行函数、算术运算或其他表达式运算；
 
+## 数据库表字段设计经验
+1. 冗余一些外围字段，方便核对和错误跟踪，不如accountDetail中 originAmount,resultAmount 方便是怎么得到amount的
+2. 冗余一些关键字段bizType,方便业务统计，流水表，哪个业务
+3. 商品，活动，优惠券，最好有个code，方便别的业务引用
+4. 
 
 ## 参考资料
 * [https://www.cnblogs.com/xinysu/p/6555082.html](https://www.cnblogs.com/xinysu/p/6555082.html)

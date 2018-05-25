@@ -20,7 +20,9 @@
 19. 解决hash冲突的方式
 20. tcp滑动窗口的作用
 21. ThreadLocal 原理
-
+22. 悲观锁（Innodb的行锁和MyISAM的表锁）和乐观锁（MVCC多版本并发控制） 
+23. https的握手
+24. spring aop 是怎么实现的
 
 
 ## 答案
@@ -46,4 +48,9 @@ https://www.zhihu.com/question/57466414
 19. 开放定址法，链地址法
 20. CP的滑动窗口主要有两个作用，一是提供TCP的可靠性，二是提供TCP的流控特性
 21. Thread 的一个map对象，set value值，将本对象作为key。在put remove会清空value=null的map元素。
+22. 
+23. 
+24. 有4中方式，静态 AspectJ，动态InvocationHandler，cglib asm,javassist https://www.cnblogs.com/stanljj/p/8509612.html
+        
+
 

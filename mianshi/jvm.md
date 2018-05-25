@@ -109,6 +109,13 @@ public static final int v = 8080;
 4. 反射（如Class.forName("xxx")）
 5. 初始化某个类的子类，则其父类也会被初始化
 
+## 静态多分派、动态单分派
+![](res/3.png)
+
+## 双亲委托（Parents Delegation Model）
+> 为什么叫双亲委托，大概就是 parents 是多个父亲，也就是双亲吧
+启动类加载器 < 扩展类加载器 < 应用程序类加载器 < 自定义类加载器
+
 ## jvm 调优
 ### jconsole,jvisualvm
 > jvisualvm 监控cpu,垃圾回收活动，堆的使用，元空间的使用，线程，检测死锁
@@ -117,3 +124,4 @@ public static final int v = 8080;
 * [http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html](http://www.blogjava.net/chhbjh/archive/2012/01/28/368936.html)
 * [http://www.importnew.com/25295.html](http://www.importnew.com/25295.html)
 * [JVM(HotSpot) 7种垃圾收集器的特点及使用场景](https://blog.csdn.net/tjiyu/article/details/53983650) 
+* [静态多分派、动态单分派](http://wiki.jikexueyuan.com/project/java-vm/polymorphism.html)

@@ -51,6 +51,13 @@ mq 幂等 producer > servername > customer
 * like %?% 怎么解决 （建立全文索引）
 * order by 数据库这层原理
 
+## 同盾科技
+* http 2.0 http 1.1 http 1.0 各自新特征
+* servlet 3.0 新特征
+* solr,es 索引太多怎么解决
+* synchronized vs lock (cas) 到底谁的性能好
+* 字节码工具 asm
+
 
 
 

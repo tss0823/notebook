@@ -46,7 +46,7 @@ https://www.zhihu.com/question/57466414
 17. 有3种方案，db,redis,zookeeper
 18. 
 19. 开放定址法，链地址法
-20. CP的滑动窗口主要有两个作用，一是提供TCP的可靠性，二是提供TCP的流控特性
+20. TCP的滑动窗口主要有两个作用，一是提供TCP的可靠性，二是提供TCP的流控特性
 21. Thread 的一个map对象，set value值，将本对象作为key。在put remove会清空value=null的map元素。
 22. 
 23. 

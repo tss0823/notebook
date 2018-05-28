@@ -5,6 +5,11 @@
 * Sublime
 * Atom
 * UltraEdit
+* Hex Fiend
+
+## 云笔记
+* 有道云
+* 印象云
 
 ## 压缩解压
 * The Unarchiver `比系统自带的好用`
@@ -43,6 +48,7 @@
 * Sequel
 
 ## 其他
+* TeamViewer `远程桌面连接`
 * Docker
 * TorBrowser
 * OBS   `(Open Broadcaster Software)开源的广播软件,用于录制和直播视频流`

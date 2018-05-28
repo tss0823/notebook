@@ -25,6 +25,7 @@
 24. spring aop 是怎么实现的
 25. docker 和vm的区别
 26. 什么是缓存污染，有哪些算法避免缓存污染
+27. 怎样遍历二叉树
 
 
 ## 答案
@@ -54,12 +55,13 @@ https://www.zhihu.com/question/57466414
 19. 开放定址法，链地址法
 20. TCP的滑动窗口主要有两个作用，一是提供TCP的可靠性，二是提供TCP的流控特性
 21. Thread 的一个map对象，set value值，将本对象作为key。在put remove会清空value=null的map元素。
-22. 
+22. [mysql锁](../mysql/mysql.md)
 23. [https](../https/https.md)
 24. 有4中方式，静态 AspectJ，动态InvocationHandler，cglib asm,javassist https://www.cnblogs.com/stanljj/p/8509612.html
 25. 主要是两种，1 结构上，vm多了一层gestos,2 性能上 docker直接利用硬件资源，vm通过虚转换，比docker下利率底
 ![](res/5.png)
 26. 在缓存机制中，会存在把不常用的数据读取到缓存中的现象，这种现象称为缓存污染.使用缓存淘汰算法（如：LFU, LRU）可以有效降低缓存污染的现象
+27. 两种方式 递归，栈
 
         
 

@@ -53,6 +53,18 @@
 * 组合索引/联合索引
 * 全文索引 `分词搜索`
 
+## 锁
+* 类型，共享锁（S Lock）,排它所（X Lock）
+* 相关表 innodb_trx,innodb_locks,innodb_lock_waits
+* 一致性锁定读，读取快照（MVCC 控制），有利于并发控制,在repeatable read模式下，selelct使用一致性非锁定读
+* 一直性非锁定读 ，for update ,in share mode,为了保证逻辑一致性
+* id自增长锁，表级别，不用等事物完成，myIsam是表锁设计，所以通过master用innodb,slave用myISAM
+* 外键锁，对父表加一个S锁
+* 行锁的3种算法，锁定单个，锁定范围不包含本身，锁定范围包含本身。
+* 死锁解决方案，相互竞争同一个资源导致.两种解决方式：innodb_lock_wait_timeout,wait_for graph。
+死锁的例子 Session A update where a = 1, update whwere a = 2 堵塞， Session B update where a = 2 ,update where a = 1 死锁回滚,Session A 提交。
+* 锁升级，ms存在锁升级，行锁升级多行或表锁。
+
 ## 新建索引的5大原则
 1. 最左前缀匹配原则，非常重要的原则，mysql会一直向右匹配直到遇到范围查询(>、<、between、like)就停止匹配，比如a = 1 and b = 2 and c > 3 and d = 4 如果建立(a,b,c,d)顺序的索引，d是用不到索引的，如果建立(a,b,d,c)的索引则都可以用到，a,b,d的顺序可以任意调整。
 2. =和in可以乱序，比如a = 1 and b = 2 and c = 3 建立(a,b,c)索引可以任意顺序，mysql的查询优化器会帮你优化成索引可以识别的形式

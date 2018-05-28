@@ -37,5 +37,7 @@
 * 适配器模式，装饰模式都是一个包装模式（Wrapper）,适配器改变接口保持功能(InputStreamReade,StreamDecoder)。装饰改变功能保持接口（InputStreamBuffer）
 * 门面模式/外观模式，Facade, Tomcat StanderWrapperFacade 作为 StanderWrapper 和 Servlet 的门面
 * 观察者模式/订阅发布模式，java 内置了，Observable 抽象主题/被观察者，负责addObserver，触发事件（setChanged，notifyObservers），Observer 观察者，通过update回调触发业务
+* 责任链模式，execute(params,filter),execute(params) interface Filter,process extends filter filter.execute(params) index++,call filter.exeute(params,filter).
+* 
 
 

@@ -62,6 +62,10 @@ void swap(int a, int b)
 }
 ```
 
+## LFU and LRU
+* 功能
+* 结构
+* 复杂度
 
 
 ## 参考资料

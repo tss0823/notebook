@@ -20,6 +20,23 @@
 * 感叹词
 * 其他
 
+## 代词
+
+### 物主代词
+it/its
+this/these
+that/those
+here/there
+
+## 人称代词
+人称|   主格 | 宾格 | 物主格 | 物宾格 
+第一人称| i,we|me,us|my,our| mine,ours
+第二人称| you| you|  your | yours
+第三人称 |he/she,they|him/her,them |his,her,their|his,hers,theirs
+
+
+
+
 ## 时代
 
 时态 |	现在|	过去 |	将来	|过去将来

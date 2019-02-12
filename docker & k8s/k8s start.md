@@ -77,6 +77,9 @@ https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/
 https://kubernetes.io/examples/pods/storage/pv-claim.yaml
 https://kubernetes.io/examples/pods/storage/pv-volume.yaml
 
+kubectl exec -it redis-cluster-0 --namespace=open-server -- redis-cli --cluster create --cluster-replicas 1 \
+$(kubectl get pods -l app=redis-cluster --namespace=open-server -o jsonpath='{range.items[*]}{.status.podIP}:6379 ')
+
 * 全部启动后
 set key 出现这个  (error) CLUSTERDOWN Hash slot not served
 
@@ -112,6 +115,16 @@ See system logs and 'systemctl status rsyslog.service' for details.
 https://serverfault.com/questions/712928/systemctl-commands-timeout-when-ran-as-root
 systemctl --force --force reboot 执行这个命令可以
 
+## 问题2
+Cannot connect to the Docker daemon at tcp://localhost:2376
+
+感谢下面链接解决
+https://serverfault.com/questions/843296/how-do-i-expose-the-docker-api-over-tcp
+
+vim /lib/systemd/system/docker.service
+ExecStart=/usr/bin/docker daemon -H fd:// -H tcp://0.0.0.0:
+sudo systemctl daemon-reload
+sudo systemctl restart docker.service
 
 ## 应用平滑升级
 kubectl -n k8s-ecoysystem-apps set image deployments/pay-member pay-member=/justmine/helloworldapi:v2.3
@@ -120,4 +133,18 @@ kubectl -n k8s-ecoysystem-apps set image deployments/pay-member pay-member=/just
 https://matthewpalmer.net/kubernetes-app-developer/articles/guide-install-kubernetes-mac.html
 
 
-ssh -gqTfnN -D 8080 root@47.75.175.157 -p 10021
+ssh -gqTfnN -D 8080 root@xxxxxx -p 10021
+
+## image 下载策略，避免用 :last
+Note that you should avoid using :latest tag, see Best Practices for Configuration for more information.
+
+## docker console log to file
+https://forums.docker.com/t/how-to-redirect-command-output-from-docker-container/49758
+
+## 文件拷贝
+kubectl cp open-server/elasticsearch-master-6984ffcd8f-jlvgh:/usr/share/elasticsearch/config /www/es/config
+
+## 资源配额/服务质量（QoS）
+* Guaranteed、Burstable和Best-Effort 3种，优先级从高到低低
+* 
+

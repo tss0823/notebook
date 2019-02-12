@@ -4,4 +4,5 @@
 * this 指整个，it 部分
 * this 指所有，it 只指物
 
-### 
+### these ara,those are
+* 代词 复数 are 

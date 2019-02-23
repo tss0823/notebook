@@ -6,3 +6,7 @@
 
 ### these ara,those are
 * 代词 复数 are 
+
+### another,other,others,the other 的区别是什么?
+* https://zhidao.baidu.com/question/367051.html
+

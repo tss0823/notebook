@@ -51,7 +51,10 @@ here/there
 
 ## 非限定动词 
 非限定动词是指那些在句中不能单独充当谓语的动词，可分为不定式、动名词、现在分词和过去分词。
-在句子中可以施展其他功能的动词是非限定动词；这些动词具有一般动词的许多特性，但没有“人称”和“数目”的限制。 非限定动词分三种： 不定式，分词（ the participle）; 动名词（the gerund）; 分词又分现在分词（ the present participle）和过去分词（the past participle）
+在句子中可以施展其他功能的动词是非限定动词；这些动词具有一般动词的许多特性，但没有“人称”和“数目”的限制。 非限定动词分三种： 不定式；分词（ the participle）; 动名词（the gerund）; 分词又分现在分词（ the present participle）和过去分词（the past participle）
+
+非限定动词，又叫非谓语动词，在句中不能单独充当谓语（但可以和情态动词或助动词一起充当谓语）。 在英语中，动词按作用和功能主要分为两大类，一类是谓语动词，另一类是非谓语动词。 非限定动词不受主语的限定，没有人称和数的变化，具有名词、形容词和副词的特征，在句中可以充当主语、宾语、表语、定语、状语、宾语补足语等。
+
 ### 动词不定时
 
 ### 分词
@@ -61,4 +64,15 @@ here/there
 ## 情态动词
 
 参考：https://baike.baidu.com/item/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95/5949894?fr=aladdin
+
+## 主动和被动
+
+## 形容词和副词的比较级
+### 一般 比较级 er,最高级 est
+https://liuxue.ef.com.cn/english-references/english-grammar/comparative-and-superlative/
+
+## 英语常用的缩写
+### 星期
+### 月份
+### 
 

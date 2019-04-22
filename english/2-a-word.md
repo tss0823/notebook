@@ -36,6 +36,26 @@
 * rarely
 * painter
   
+## A car called Bluebird
+* racing
+* driver
+* miles
+* specially
+* horsepower
+* engine
+* tyre
+* burst
+* difficulty
+* attempt
+* average
+* footsteps
 
 
-  
+
+## The record-holder
+* cinema 
+* truant
+* unimaginative
+* 
+
+## 

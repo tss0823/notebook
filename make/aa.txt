@@ -1,0 +1,8 @@
+//*[@id="root"]/div/main/div/div[1]/div[2]/div[1]/div[1]/h1
+
+
+document.querySelector("#root > div > main > div > div:nth-child(11) > div.QuestionHeader > div.QuestionHeader-content > div.QuestionHeader-main > h1")
+
+
+#root > div > main > div > div:nth-child(11) > div.QuestionHeader > div.QuestionHeader-content > div.QuestionHeader-main > h1
+

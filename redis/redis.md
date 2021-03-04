@@ -56,3 +56,4 @@ Redis 的 Sentinel 系统用于管理多个 Redis 服务器（instance）， 该
 * [https://www.biaodianfu.com/redis-vs-memcached.html](https://www.biaodianfu.com/redis-vs-memcached.html)
 * [主从集群](https://blog.csdn.net/u011204847/article/details/51307044)
 * [sentinel](https://blog.csdn.net/u011204847/article/details/51307044)
+* [memcached vs redis](https://www.imaginarycloud.com/blog/redis-vs-memcached/)

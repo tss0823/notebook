@@ -56,8 +56,8 @@
 ## 锁
 * 类型，共享锁（S Lock）,排它所（X Lock）
 * 相关表 innodb_trx,innodb_locks,innodb_lock_waits
-* 一致性锁定读，读取快照（MVCC 控制），有利于并发控制,在repeatable read模式下，selelct使用一致性非锁定读
-* 一直性非锁定读 ，for update ,in share mode,为了保证逻辑一致性
+* 一致性非锁定读，读取快照（MVCC 控制），有利于并发控制,在repeatable read模式下，selelct使用一致性非锁定读
+* 一致性锁定读 ，for update ,in share mode,为了保证逻辑一致性
 * id自增长锁，表级别，不用等事物完成，myIsam是表锁设计，所以通过master用innodb,slave用myISAM
 * 外键锁，对父表加一个S锁
 * 行锁的3种算法，锁定单个，锁定范围不包含本身，锁定范围包含本身。

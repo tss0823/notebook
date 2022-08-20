@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      .sel {display: none;}
+    </style>
+
+    <title>隔离时间对照表</title>
+  </head>
+  <body>
+    <div style="margin: 5px;">
+        <h3 style="text-align: center;margin-bottom:5px ;">隔离时间对照表</h3>
+
+
+        <div id="query_source" >
+            <label>是否来自湖北：</label>
+            <select id="source">
+                <option value="">请选择</option>
+                <option value="yes">是</option>
+                <option value="no">否</option>
+            </select>
+        </div>
+        <div id="query_via" class="sel">
+            <label>是否途径湖北：</label>
+            <select id="via">
+                <option value="">请选择</option>
+                <option value="yes">是</option>
+                <option value="no">否</option>
+            </select>
+        </div>
+
+
+        <div id="query_comeFromHb" class="sel">
+                <label>家中是否有来自湖北的亲属朋友：</label>
+                <select id="comeFromHb">
+                    <option value="">请选择</option>
+                    <option value="yes">是</option>
+                    <option value="no">否</option>
+                </select>
+        </div>
+
+        <div id="query_time" class="sel">
+                <label>是否1月25日前到海盐：</label>
+                <select id="time">
+                    <option value="">请选择</option>
+                    <option value="yes">是</option>
+                    <option value="no">否</option>
+                </select>
+        </div>
+
+
+        <div id="query_receptionFriend" class="sel">
+                <label>是否接待过嘉兴以外的的亲属朋友：</label>
+                <select id="receptionFriend">
+                    <option value="">请选择</option>
+                    <option value="yes">是</option>
+                    <option value="no">否</option>
+                </select>
+        </div>
+
+        <div id="query_receptionFriendByCar" class="sel">
+                <label>接待的亲属朋友是否自驾游到达：</label>
+                <select id="receptionFriendByCar">
+                    <option value="">请选择</option>
+                    <option value="yes">是</option>
+                    <option value="no">否</option>
+                </select>
+        </div>
+
+
+        <div id="query_busOutJxHb" class="sel">
+                <label>是否在嘉兴以外乘坐过公共交通：</label>
+                <select id="busOutJxHb">
+                    <option value="">请选择</option>
+                    <option value="yes">是</option>
+                    <option value="no">否</option>
+                </select>
+        </div>
+
+        <div id="query_carOutJxHb" class="sel">
+                <label>是否在嘉兴以外自驾回海盐：</label>
+                <select id="carOutJxHb">
+                    <option value="">请选择</option>
+                    <option value="yes">是</option>
+                    <option value="no">否</option>
+                </select>
+        </div>
+
+        <div id="result" style="font-size: 21px;"></div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script> -->
+    <script>
+        var carOutJxHbObj = {
+           id:'carOutJxHb',
+           yes:{result:'居家隔离7天',level:2},
+           no:{result:'无需隔离',level:5},
+       };
+       var busOutJxHbObj = {
+           id:'busOutJxHb',
+           yes:{result:'居家隔离14天',level:1},
+           no:{result:null,nextObj:carOutJxHbObj},
+       };
+
+       var receptionFriendByCarObj = {
+           id:'receptionFriendByCar',
+           yes:{result:'居家隔离7天',level:2},
+           no:{result:'居家隔离14天',level:1},
+       };
+
+       var receptionFriendObj = {
+           id:'receptionFriend',
+           yes:{result:null,nextObj:receptionFriendByCarObj},
+           no:{result:null,nextObj:busOutJxHbObj},
+       };
+
+       var timeObj = {
+           id:'time',
+           yes:{result:'居家隔离14天',level:1},
+           no:{result:'集中隔离14天',level:0},
+       };
+
+       var comeFromHbObj = {
+           id:'comeFromHb',
+           yes:{result:null,nextObj:timeObj},
+           no:{result:null,nextObj:receptionFriendObj},
+       };
+
+       var viaObj = {
+           id:'via',
+           yes:{result:null,nextObj:timeObj},
+           no:{result:null,nextObj:comeFromHbObj},
+       };
+
+
+       var sourceObj = {
+           id:'source',
+           yes:{result:null,nextObj:timeObj},
+           no:{result:null,nextObj:viaObj},
+       };
+
+ 
+       var mapObj = {source:sourceObj,via:viaObj,comeFromHb:comeFromHbObj,time:timeObj,receptionFriend:receptionFriendObj,
+        receptionFriendByCar:receptionFriendByCarObj,busOutJxHb:busOutJxHbObj,carOutJxHb:carOutJxHbObj}
+
+       $(document).ready(function(){
+            Object.keys(mapObj).map((key)=>{
+                    // console.log("key="+key+",value="+JSON.stringify(mapObj[key]));
+                $("#"+key).change(function(){
+                    var val = $(this).val();
+                    if(!val){
+                        return;
+                    }
+                    var id = $(this).attr("id");
+                    var obj = mapObj[id];
+                    var result = obj[val]['result'];
+                    if( result == null){
+                        //show nextObj
+                        var nextObj = obj[val]['nextObj'];
+                        
+                        
+                        var netxtId = nextObj['id'];
+                        $("#query_"+netxtId).show();
+
+                        //查找nextObj之后的链表对象，有就隐藏掉，知道没有next
+                        hideNextObj(id); 
+
+                        //展示next
+                        $("#"+netxtId).find("option").eq(0).prop("selected",true)
+                        $("#query_"+netxtId).show();
+
+
+                        // var index = nextObj['index'];
+                        // Object.keys(mapObj).map((key)=>{
+                        //     var thisObj = mapObj[key];
+                        //     if(thisObj['index'] > index){
+                        //         var thisId = thisObj['id'];
+                        //         hideNextObj(thisId);
+                        //         // $("#"+thisId).find("option").eq(0).prop("selected",true)
+                        //         // $("#query_"+thisId).hide();
+                        //     }
+                        // }) 
+                        setResult("");
+
+                    }else{
+                         setResult(result);
+                        //end
+                    }
+                    console.log(val+",id="+id)
+                });
+            })
+       });
+
+
+
+       function setResult(text){
+        //    var resultText  = "隔离 <span>"+text+"</span> 天"
+           $("#result").html(text);
+       }
+
+       function hideNextObj(thisId){
+          var obj = mapObj[thisId];
+          var arr = ['yes','no'];
+          arr.forEach(function(item,index,array){
+            var nextObj = obj[item]['nextObj'];
+            if(nextObj != null){
+                var nextId = nextObj['id']; 
+                $("#"+nextId).find("option").eq(0).prop("selected",true)
+                $("#query_"+nextId).hide(); 
+                hideNextObj(nextId);
+            }
+          });
+
+       }
+
+    </script>
+  </body>
+</html>
